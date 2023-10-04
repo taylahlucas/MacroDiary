@@ -16,10 +16,10 @@ const CustomSearchBar = ({
   const theme = useGetTheme();
 
   return (
-    <View style={{...styles.searchBarContainer, backgroundColor: theme.surfaceColor}}>
-      <Icon style={styles.searchBarIcon} name={'search'} color={theme.textOnBg} size={25} />
+    <View style={{...styles.searchBarContainer, backgroundColor: theme.midGrey}}>
+      <Icon style={styles.searchBarIcon} name={'search'} color={theme.lightGrey} size={25} />
       <TextInput
-        style={{...styles.textInput, color: theme.textOnBg }}
+        style={{...styles.textInput, color: theme.lightGrey }}
         placeholder={placeholder}
         onPressIn={(): void => setSearchValue('')}
         onChange={(event): void => setSearchValue(event.nativeEvent.text ?? '')}

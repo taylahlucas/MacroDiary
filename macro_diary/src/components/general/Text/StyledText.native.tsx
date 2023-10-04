@@ -21,7 +21,7 @@ const StyledText: React.FunctionComponent<StyledTextProps> = ({
   const theme = useGetTheme();
   
   return (
-    <Text style={{ ...defaultStyle[type], ...defaultStyle[align], ...style, color: theme.textOnBg }}>{children}</Text>
+    <Text style={{ ...defaultStyle[type], ...defaultStyle[align], ...style, color: theme.lightGrey }}>{children}</Text>
   );
 };
 

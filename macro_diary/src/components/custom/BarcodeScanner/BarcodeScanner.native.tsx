@@ -69,7 +69,7 @@ const BarcodeScanner = ({ setShowBarcodeScanner, barcodes, productData, setBarco
       <Button 
         title={'x'} 
         onPress={(): void => setShowBarcodeScanner(false)}
-        style={{...styles.exitButton, backgroundColor: theme.textOnBg, justifyContent: 'center' }}  
+        style={{...styles.exitButton, backgroundColor: theme.lightGrey, justifyContent: 'center' }}  
       />
       <BarcodeScannerOverlay />
       <BarCodeScanner

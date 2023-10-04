@@ -15,10 +15,10 @@ const CustomPieChart = ({ isDonut = false, data }: CustomPieChartProps) => {
       data={data} 
       radius={80}
       focusOnPress
-      innerCircleColor={theme.backgroundColor}
+      innerCircleColor={theme.black}
       showText
       textSize={20}
-      textColor={theme.textOnBg}
+      textColor={theme.midGrey}
     />
   );
 };

@@ -16,7 +16,7 @@ const BarcodeScannerButton = ({ showCamera, setShowCamera }: BarcodeScannerButto
       <Button 
         title={'Scan barcode'} 
         onPress={(): void => setShowCamera(!showCamera)}
-        style={{...styles.barcodeButton, backgroundColor: theme.secondary }}
+        style={{...styles.barcodeButton, backgroundColor: theme.darkGrey }}
       />
     </View>
   );

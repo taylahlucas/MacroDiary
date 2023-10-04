@@ -19,7 +19,7 @@ const ScannedItemListItem = ({ title, macros }: ScannedItemListItemProps) => {
       header={<SelectableListItem 
         title={title} 
         onClick={(): void => setOpenItem(!openItem)}
-        style={{ backgroundColor: theme.secondarySurfaceColor, minWidth: 350 }}
+        style={{ backgroundColor: theme.midGrey, minWidth: 350 }}
       />}
       view={<ScannedItem macros={macros} isOpen={openItem} />}
     />

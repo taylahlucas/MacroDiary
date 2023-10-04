@@ -16,6 +16,7 @@
 		7699B88040F8A987B510C191 /* libPods-macro_diary-macro_diaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-macro_diary-macro_diaryTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BEBB1B6A282DF5F3B6565F28 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60FA0104BC26B7465D526F8 /* ExpoModulesProvider.swift */; };
+		D0126F642ACDA8A20072801E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D0126F632ACDA8A20072801E /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = macro_diary/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-macro_diary-macro_diaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macro_diary-macro_diaryTests.release.xcconfig"; path = "Target Support Files/Pods-macro_diary-macro_diaryTests/Pods-macro_diary-macro_diaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		B60FA0104BC26B7465D526F8 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-macro_diary/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		D0126F632ACDA8A20072801E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D0126F632ACDA8A20072801E /* assets */,
 				13B07FAE1A68108700A75B9A /* macro_diary */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* macro_diaryTests */,
@@ -274,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0126F642ACDA8A20072801E /* assets in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
