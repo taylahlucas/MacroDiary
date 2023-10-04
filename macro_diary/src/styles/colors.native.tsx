@@ -1,25 +1,23 @@
 /* Dark mode palette */
-export const backgroundDark = "#0F0F0F";
-export const surfaceDark = "#171717";
-export const secondarySurfaceDark = "#383838";
+export const black = "#1D1F24";
+export const darkGrey = "#303338";
+export const midGrey = "#68696D";
+export const lightGrey = "#BBBBBB";
+export const lightestGrey = "#E8E8E8";
 
-export const primaryDark = "#AC6AFB";
-export const textOnPrimaryDark = "#2C1D3C";
-export const secondaryDark = "#1DD4BA";
-export const textOnSecondaryDark = "#000000";
+export const primaryPurple = "#5231F5";
+export const purpleLight = "#6B72FF";
 
-export const textOnBgDark = "#DBDBDB";
-export const secondaryTextOnBgDark = "#666666";
-
+export const greenLight = "#68C2A2";
 
 export const darkTheme = {
-  backgroundColor: backgroundDark,
-  surfaceColor: surfaceDark,
-  secondarySurfaceColor: secondarySurfaceDark,
-  primary: primaryDark,
-  secondary: secondaryDark,
-  textOnPrimary: textOnPrimaryDark,
-  textOnSecondary: textOnSecondaryDark,
-  textOnBg: textOnBgDark,
-  secondaryTextOnBg: textOnSecondaryDark
+  black: black,
+  darkGrey: darkGrey,
+  midGrey: midGrey,
+  lightGrey: lightGrey,
+  lightestGrey: lightestGrey,
+
+  primaryPurple: primaryPurple,
+  purpleLight: purpleLight,
+  greenLight: greenLight,
 }

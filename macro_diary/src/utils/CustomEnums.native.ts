@@ -10,6 +10,6 @@ export enum MacroEnum {
 }
 
 export enum ScreenEnum {
-  Home = 'Home',
+  Search = 'Search',
   Diary = 'Diary'
 }
