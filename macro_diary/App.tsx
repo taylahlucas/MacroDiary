@@ -1,5 +1,5 @@
 import { SafeAreaView } from 'react-native';
-// import Home from './src/screens/Home.native';
+import Home from './src/screens/Home.native';
 // import useGetTheme from '../styles/hooks/useGetTheme.native';
 // import { NavigationContainer } from '@react-navigation/native';
 // import StackNavigator from '../navigation/StackNavigator.native';
@@ -7,7 +7,9 @@ import { SafeAreaView } from 'react-native';
 const App = () => {
 
   return (
-    <SafeAreaView style={{ height: 100, width: 100, backgroundColor: 'red' }} />
+    <SafeAreaView>
+      <Home />
+    </SafeAreaView>
     // <NavigationContainer>
     //   <StackNavigator />
     // </NavigationContainer>
