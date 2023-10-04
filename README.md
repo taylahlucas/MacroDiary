@@ -11,3 +11,6 @@ An application which tracks macro and vitamin intake built using React Native &a
 - react-native-gifted-charts
   - react-native-svg
   - react-native-linear-gradient
+- @react-navigation/native
+  - react-native-screens
+  - react-native-safe-area-context

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native';
-// import useReactNavigation from '../navigation/hooks/useReactNavigation.native';
+import useReactNavigation from '../navigation/hooks/useReactNavigation.native';
 import StandardLayout from "../components/general/Layouts/StandardLayout.native";
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import BarcodeScanner from '../components/custom/BarcodeScanner/BarcodeScanner.native';
@@ -11,11 +11,11 @@ import Spacing from '../components/general/Spacing.native';
 import useGetTheme from '../styles/hooks/useGetTheme.native';
 import { ProductDataType } from '../utils/CustomTypes.native';
 import Button from '../components/general/Buttons/Button.native';
-// import { ScreenEnum } from '../utils/CustomEnums.native';
+import { ScreenEnum } from '../utils/CustomEnums.native';
 
 const Home = () => {
   const theme = useGetTheme();
-  // // const navigation = useReactNavigation();
+  const navigation = useReactNavigation();
   const [hasPermission, setHasPermission] = useState(false);
   const [showCamera, setShowCamera] = useState(false);
   // // TODO: Move to redux
@@ -43,8 +43,7 @@ const Home = () => {
     <StandardLayout>
       <ScannedItemSearch items={productData} />
       <Spacing height={20} />
-      {/* navigation.navigate(ScreenEnum.Diary) */}
-      <Button title="test" style={{ width: 50, height: 50, position: 'absolute', bottom: 50, left: 10, backgroundColor: 'red', borderRadius: 5 }} onPress={() => console.log("NAVIGATE")}/>
+      <Button title="test" style={{ width: 50, height: 50, position: 'absolute', bottom: 50, left: 10, backgroundColor: 'red', borderRadius: 5 }} onPress={() => navigation.navigate(ScreenEnum.Diary) }/>
       <BarcodeScannerButton showCamera={showCamera} setShowCamera={setShowCamera} />
       <Condition condition={hasPermission && showCamera}>
         <BarcodeScanner 
