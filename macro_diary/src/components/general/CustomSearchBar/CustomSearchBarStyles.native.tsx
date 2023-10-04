@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   searchBarContainer: {
-    width: 350,
-    height: 50, 
+    height: 45, 
+    width: '80%',
     borderRadius: 5,
     justifyContent: 'center'
   },

@@ -11,16 +11,6 @@ export const styles = StyleSheet.create({
   barcodeScanner: {
     flex: 1
   },
-  barcodeButtonContainer: {
-    position: 'absolute',
-    bottom: 50
-  },
-  barcodeButton: {
-    width: 100, 
-    height: 50, 
-    borderRadius: 8, 
-    justifyContent: 'center'
-  },
   exitButton: {
     width: 30, 
     height: 30, 

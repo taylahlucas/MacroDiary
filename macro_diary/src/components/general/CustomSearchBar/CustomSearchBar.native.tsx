@@ -16,8 +16,8 @@ const CustomSearchBar = ({
   const theme = useGetTheme();
 
   return (
-    <View style={{...styles.searchBarContainer, backgroundColor: theme.midGrey}}>
-      <Icon style={styles.searchBarIcon} name={'search'} color={theme.lightGrey} size={25} />
+    <View style={{...styles.searchBarContainer, backgroundColor: theme.darkGrey}}>
+      <Icon style={styles.searchBarIcon} name={'search'} color={theme.midGrey} size={25} />
       <TextInput
         style={{...styles.textInput, color: theme.lightGrey }}
         placeholder={placeholder}

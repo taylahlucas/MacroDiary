@@ -6,6 +6,7 @@ interface SelectableListItemProps {
   title: string;
   onClick: () => void;
   style?: any;
+  isHorizontal?: boolean;
 };
 
 const SelectableListItem = ({ title, onClick, style }: SelectableListItemProps) => {

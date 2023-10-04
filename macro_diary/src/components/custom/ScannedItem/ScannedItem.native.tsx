@@ -20,7 +20,7 @@ const ScannedItem = ({ macros, isOpen = false }: ScannedItemProps) => {
 
   return (
     <Condition condition={isOpen}>
-      <View style={{ ...styles.container, backgroundColor: theme.midGrey }}>
+      <View style={{ ...styles.container, backgroundColor: theme.darkGrey }}>
         <Spacing height={16}/>
         <View style={styles.chartContainer}>
           <CustomPieChart isDonut={true} data={data} />

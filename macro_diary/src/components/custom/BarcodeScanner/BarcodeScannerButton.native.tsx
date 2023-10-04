@@ -1,7 +1,6 @@
-import { View } from 'react-native';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import Button from '../../general/Buttons/Button.native';
-import { styles } from "./BarcodeScannerStyles.native";
+import { BarcodeScannerButtonContainer } from './BarcodeScannerStyledComponents.native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface BarcodeScannerButtonProps {
   showCamera: boolean;
@@ -12,13 +11,13 @@ const BarcodeScannerButton = ({ showCamera, setShowCamera }: BarcodeScannerButto
   const theme = useGetTheme();
   
   return (
-    <View style={styles.barcodeButtonContainer}>
-      <Button 
-        title={'Scan barcode'} 
-        onPress={(): void => setShowCamera(!showCamera)}
-        style={{...styles.barcodeButton, backgroundColor: theme.darkGrey }}
-      />
-    </View>
+    <BarcodeScannerButtonContainer
+      backgroundColor={theme.primaryPurple}
+      onPress={(): void => setShowCamera(!showCamera)}
+    >
+      {/* // TODO: Fix centering */}
+      <Icon style={{ textAlign: 'center', marginLeft: 3 }} name={'barcode-outline'} color={'white'} size={32} />
+    </BarcodeScannerButtonContainer>
   );
 };
 

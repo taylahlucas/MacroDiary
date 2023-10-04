@@ -3,8 +3,7 @@ import { StyleSheet } from 'react-native';
 const listStyles = StyleSheet.create({
   scrollableContent: {
     alignItems: 'center', 
-    alignSelf: 'center',
-    paddingBottom: 100
+    alignSelf: 'center'
   },
   scrollableList: {
     padding: 16
