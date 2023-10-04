@@ -6,7 +6,6 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import BarcodeScanner from '../components/custom/BarcodeScanner/BarcodeScanner.native';
 import ScannedItemSearch from '../components/custom/ScannedItem/ScannedItemSearch.native';
 import Condition from '../components/general/Condition.native';
-import BarcodeScannerButton from '../components/custom/BarcodeScanner/BarcodeScannerButton.native';
 import Spacing from '../components/general/Spacing.native';
 import useGetTheme from '../styles/hooks/useGetTheme.native';
 import { ProductDataType } from '../utils/CustomTypes.native';

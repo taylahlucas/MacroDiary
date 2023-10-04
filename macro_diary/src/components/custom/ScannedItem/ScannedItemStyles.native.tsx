@@ -2,12 +2,18 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   searchContainer: {
-    marginTop: 32
+    marginTop: 32,
+    marginRight: 8,
+    marginLeft: 8,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
   },
   scrollContainer: {
     width: 350,
     marginBottom: 130,
-    borderRadius: 5
+    borderRadius: 5,
+    alignSelf: 'center'
   },
   container: {
     width: 350, 
