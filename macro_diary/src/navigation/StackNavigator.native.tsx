@@ -1,8 +1,6 @@
 import { createBottomTabNavigator, BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { ScreenEnum } from '../utils/CustomEnums.native';
 import useDefaultHeaderOptions from './hooks/useDefaultHeaderOptions.native';
-import Search from '../screens/Search.native';
-import Diary from '../screens/Diary.native';
 import BottomTabNavigator from './BottomTabNavigator.native';
 import useGetTabList from './hooks/useGetTabList.native';
 
@@ -12,6 +10,7 @@ const StackNavigator: React.FunctionComponent = (): JSX.Element => {
   const headerOptions = useDefaultHeaderOptions();
   const tabList = useGetTabList();
 
+  // TODO: Add active icon
   return (
     <Tab.Navigator 
       initialRouteName={ScreenEnum.Search} 

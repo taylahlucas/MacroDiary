@@ -1,22 +1,18 @@
 import React from 'react';
-import { View, Pressable, SafeAreaView } from 'react-native';
+import { View, Pressable } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import useGetTheme from '../styles/hooks/useGetTheme.native';
 import Icon from '../components/general/Icon/Icon.native';
 import { TabEnum } from '../utils/CustomEnums.native';
 import Condition from '../components/general/Condition.native';
+import { TabNavigatorContainer, BottomTabNavigatorIconBackground } from './BottomTabNavigatorStyledComponents.native'; 
 
 const BottomTabNavigator = ({ state, descriptors, navigation }: BottomTabBarProps): JSX.Element => {
   const theme = useGetTheme();
 
   // TODO: Purple when selected && move to StyledComponents
   return (
-    <SafeAreaView style={{ 
-      height: 100, 
-      backgroundColor: theme.darkGrey, 
-      flexDirection: 'row', 
-      justifyContent: 'space-evenly'
-    }}>
+    <TabNavigatorContainer backgroundColor={theme.darkGrey}>
       {state.routes.map((route: any, index: number) => {
         return (
           <Pressable 
@@ -40,23 +36,13 @@ const BottomTabNavigator = ({ state, descriptors, navigation }: BottomTabBarProp
                   size={55}
                   color={theme.primaryPurple }
                 />
-                <View 
-                  style={{ 
-                    height: 25, 
-                    width: 25, 
-                    zIndex: -1,
-                    borderRadius: 10,
-                    position: 'absolute',
-                    alignSelf: 'center',
-                    backgroundColor: theme.lightestGrey 
-                  }}
-                />
+                <BottomTabNavigatorIconBackground backgroundColor={theme.lightestGrey} />
               </>
             </Condition>
           </Pressable>
         )
       })}
-    </SafeAreaView>
+    </TabNavigatorContainer>
   )
 };
 
