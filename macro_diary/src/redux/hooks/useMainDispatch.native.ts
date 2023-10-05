@@ -1,16 +1,18 @@
 import { Dispatch } from 'redux';
 import { ProductDataType } from '../../utils/CustomTypes.native';
 import { 
+  setHasBarcodeScannerPermission,
   setShowCamera,
   setSearchValue,
   setBarcodes,
   setProductData,
   setFilteredProductData,
-  setSelectedSearchTableIndex 
+  setSelectedSearchTableIndex
 } from '../MainState.native';
 import { useAppDispatch } from '../store.native';
 
 interface MainDispatch {
+  setHasBarcodeScannerPermission: (value: boolean) => void;
   setShowCamera: (value: boolean) => void;
   setSearchValue: (value: string) => void;
   setBarcodes: (value: string[]) => void;
@@ -23,6 +25,9 @@ const useMainDispatch = (): MainDispatch => {
   const dispatch: Dispatch = useAppDispatch();
 
   return {
+    setHasBarcodeScannerPermission(value: boolean): void {
+      dispatch(setHasBarcodeScannerPermission(value));
+    },
     setShowCamera(value: boolean): void {
       dispatch(setShowCamera(value));
     },

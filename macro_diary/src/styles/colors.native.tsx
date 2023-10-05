@@ -6,7 +6,7 @@ export const lightGrey = "#BBBBBB";
 export const lightestGrey = "#E8E8E8";
 
 export const primaryPurple = "#5231F5";
-export const purpleLight = "#6B72FF";
+export const lightPurple = "#6B72FF";
 
 export const greenLight = "#68C2A2";
 
@@ -18,6 +18,6 @@ export const darkTheme = {
   lightestGrey: lightestGrey,
 
   primaryPurple: primaryPurple,
-  purpleLight: purpleLight,
+  lightPurple: lightPurple,
   greenLight: greenLight,
 }

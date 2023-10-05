@@ -1,4 +1,12 @@
-import { ScreenEnum } from "./CustomEnums.native";
+import { ScreenEnum, IconTypeEnum, TabEnum } from "./CustomEnums.native";
+
+export interface TabItemType {
+  id: TabEnum;
+  icon: string;
+  iconType: IconTypeEnum;
+  title: string;
+  screen: () => React.JSX.Element;
+}
 
 export interface ProductDataType {
   barcode: string;

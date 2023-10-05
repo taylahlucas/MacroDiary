@@ -1,26 +1,36 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StackNavigatorParams } from './StackNavigatorParams.native';
+import { createBottomTabNavigator, BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { ScreenEnum } from '../utils/CustomEnums.native';
 import useDefaultHeaderOptions from './hooks/useDefaultHeaderOptions.native';
 import Search from '../screens/Search.native';
 import Diary from '../screens/Diary.native';
+import BottomTabNavigator from './BottomTabNavigator.native';
+import useGetTabList from './hooks/useGetTabList.native';
 
-const Stack = createNativeStackNavigator<StackNavigatorParams>();
+const Tab = createBottomTabNavigator();
 
 const StackNavigator: React.FunctionComponent = (): JSX.Element => {
   const headerOptions = useDefaultHeaderOptions();
+  const tabList = useGetTabList();
 
   return (
-    <Stack.Navigator initialRouteName={ScreenEnum.Search} screenOptions={headerOptions}>
-      <Stack.Screen
-        name={ScreenEnum.Search}
-        component={Search}
-      />
-      <Stack.Screen
-        name={ScreenEnum.Diary}
-        component={Diary}
-      />
-    </Stack.Navigator>
+    <Tab.Navigator 
+      initialRouteName={ScreenEnum.Search} 
+      screenOptions={headerOptions}
+      tabBar={(props: BottomTabBarProps): JSX.Element => <BottomTabNavigator {...props} />}
+    >
+      {tabList.map(tab => 
+        <Tab.Screen
+          key={tab.id}
+          name={tab.title}
+          component={tab.screen}
+          initialParams={{
+            id: tab.id,
+            icon: tab.icon,
+            iconType: tab.iconType
+          }}
+        />
+      )}
+    </Tab.Navigator>
   );
 };
 

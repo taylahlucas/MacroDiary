@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ProductDataType } from "../utils/CustomTypes.native";
 
 export interface MainState {
+  readonly hasBarcodeScannerPermission: boolean;
   readonly showCamera: boolean;
   readonly searchValue: string;
   readonly barcodes: string[];
@@ -11,6 +12,7 @@ export interface MainState {
 }
 
 export const initialState: MainState = {
+  hasBarcodeScannerPermission: false,
   showCamera: false,
   searchValue: '',
   barcodes: [],
@@ -23,6 +25,9 @@ const slice = createSlice({
   name: 'main',
   initialState: initialState,
   reducers: {
+    setHasBarcodeScannerPermission: (state, action) => {
+      state.hasBarcodeScannerPermission = action.payload;
+    },
     setShowCamera: (state, action) => {
       state.showCamera = action.payload;
     },
@@ -45,6 +50,7 @@ const slice = createSlice({
 })
 
 export const {
+  setHasBarcodeScannerPermission,
   setShowCamera, 
   setSearchValue,
   setBarcodes,

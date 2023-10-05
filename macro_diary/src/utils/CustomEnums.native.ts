@@ -13,3 +13,16 @@ export enum ScreenEnum {
   Search = 'Search',
   Diary = 'Diary'
 }
+
+export enum IconTypeEnum {
+  MaterialIcons = 'MaterialIcons',
+  Ionicons = 'Ionicons',
+}
+
+export enum TabEnum {
+  SEARCH,
+  DIARY,
+  ADD_RECIPE,
+  CHARTS,
+  SETTINGS
+}
