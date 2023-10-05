@@ -15,37 +15,20 @@ interface SetShowCameraAction {
   payload: boolean;
 }
 
-export type MainActions = SetShowCameraAction;
-
-export function setShowCamera(value: boolean): SetShowCameraAction {
-  return { type: SET_SHOW_CAMERA, payload: value }
-}
-
 export const setShowCameraReducer: CaseReducer<MainState, PayloadAction<boolean>> = (state, action) => { 
   action.type
   return { ...state, showCamera: action.payload }
 }
 
-function MainStateReducer(state = initialState, action: MainActions): MainState {
-  switch (action.type) {
-    case SET_SHOW_CAMERA:
-      console.log("SHOW CAMERA: ", action.payload)
-      return {
-        ...state,
-        showCamera: action.payload
-      }
-  }
-}
-
 const slice = createSlice({
   name: 'main',
   initialState: initialState,
-  reducers:  {
-    setShowCameraReducer,
+  reducers: {
     setShowCamera: (state, action) => {
       state.showCamera = action.payload
     }
   }
 })
 
+export const { setShowCamera } = slice.actions 
 export default slice.reducer;

@@ -11,12 +11,14 @@ import useGetTheme from '../styles/hooks/useGetTheme.native';
 import { ProductDataType } from '../utils/CustomTypes.native';
 import Button from '../components/general/Buttons/Button.native';
 import { ScreenEnum } from '../utils/CustomEnums.native';
+import useMainState from '../redux/hooks/useMainState.native';
 
 const Search = () => {
   const theme = useGetTheme();
   const navigation = useReactNavigation();
   const [hasPermission, setHasPermission] = useState(false);
-  const [showCamera, setShowCamera] = useState(false);
+  // const [showCamera, setShowCamera] = useState(false);
+  const { showCamera } = useMainState();
   // TODO: Move to redux
   const [barcodes, setBarcodes] = useState<string[]>([]);
   const [productData, setProductData] = useState<ProductDataType[]>([]);
@@ -46,7 +48,6 @@ const Search = () => {
       <Button title="test" style={{ width: 50, height: 50, position: 'absolute', bottom: 50, left: 10, backgroundColor: 'red', borderRadius: 5 }} onPress={() => navigation.navigate(ScreenEnum.Diary)}/>
       <Condition condition={hasPermission && showCamera}>
         <BarcodeScanner 
-          setShowBarcodeScanner={setShowCamera} 
           barcodes={barcodes}
           productData={productData}
           setBarcodes={setBarcodes}

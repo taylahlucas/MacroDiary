@@ -15,8 +15,3 @@ export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch: () => AppDispatch = useDispatch;
 
 export default store;
-
-// export const setShowCameraReducer: CaseReducer<MainState, PayloadAction<boolean>> = (state, action) => { 
-//   action.type
-//   return { ...state, showCamera: action.payload }
-// }

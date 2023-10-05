@@ -6,6 +6,7 @@ import { styles } from './BarcodeScannerStyles.native';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import { ProductDataType } from '../../../utils/CustomTypes.native';
 import BarcodeScannerOverlay from './BarcodeScannerOverlay.native';
+import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
 
 interface BarCodeScannedParams {
   type: string;
@@ -13,19 +14,19 @@ interface BarCodeScannedParams {
 }
 
 interface BarcodeScannerProps {
-  setShowBarcodeScanner: (value: boolean) => void;
   barcodes: string[];
   productData: ProductDataType[];
   setBarcodes: (value: string[]) => void;
   setProductData: (data: ProductDataType[]) => void;
 }
 
-const BarcodeScanner = ({ setShowBarcodeScanner, barcodes, productData, setBarcodes, setProductData }: BarcodeScannerProps) => {
+const BarcodeScanner = ({ barcodes, productData, setBarcodes, setProductData }: BarcodeScannerProps) => {
   const theme = useGetTheme();
+  const { setShowCamera } = useMainDispatch();
 
   // TODO: Move these to custom hooks
   const handleBarCodeScanned = ({ type, data }: BarCodeScannedParams) => {
-    setShowBarcodeScanner(false);
+    setShowCamera(false);
     setBarcodes([...barcodes, data]);
     if (!!barcodes.find((item) => item === data)) {
       Alert.alert('Product already scanned');

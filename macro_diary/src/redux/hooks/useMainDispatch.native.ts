@@ -1,6 +1,5 @@
 import { Dispatch } from 'redux';
-import { useDispatch } from "react-redux";
-import { setShowCamera, MainActions } from '../MainState.native';
+import { setShowCamera } from '../MainState.native';
 import { useAppDispatch } from '../store.native';
 
 interface MainDispatch {
@@ -8,7 +7,7 @@ interface MainDispatch {
 }
 
 const useMainDispatch = (): MainDispatch => {
-  const dispatch: Dispatch<MainActions> = useAppDispatch();
+  const dispatch: Dispatch = useAppDispatch();
 
   return {
     setShowCamera(value: boolean): void {
