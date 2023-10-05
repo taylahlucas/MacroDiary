@@ -1,7 +1,6 @@
 # MacroDiary
 An application which tracks macro and vitamin intake built using React Native &amp; Typescript.
 
-
 # Packages
 
 - expo-barcode-scanner
@@ -14,3 +13,6 @@ An application which tracks macro and vitamin intake built using React Native &a
 - @react-navigation/native
   - react-native-screens
   - react-native-safe-area-context
+- @reduxjs/toolkit
+  - react-redux
+  - redux-logger && @types/redux-logger

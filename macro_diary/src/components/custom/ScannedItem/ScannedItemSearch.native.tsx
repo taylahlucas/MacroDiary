@@ -9,6 +9,8 @@ import { styles } from './ScannedItemStyles.native';
 import BarcodeScannerButton from '../BarcodeScanner/BarcodeScannerButton.native';
 import { productDataMock } from '../../../mock/mockData.native';
 import { ScannedItemListTitle } from './ScannedItemStyledComponents.native';
+// import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
+import useMainState from '../../../redux/hooks/useMainState.native';
 
 interface ScannedItemSearchProps {
   items: ProductDataType[];
@@ -17,8 +19,6 @@ interface ScannedItemSearchProps {
 const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
   const [searchValue, setSearchValue] = useState('')
   const [filteredItems, setFilteredItems] = useState<ProductDataType[]>(productDataMock);
-  const [showCamera, setShowCamera] = useState(false);
-
   // TODO: Move to custom hook when redux is added
   // useEffect(() => {
   //   if (searchValue.length > 2) {
@@ -35,7 +35,7 @@ const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
         <>        
           <View style={styles.searchContainer}>
             <CustomSearchBar setSearchValue={setSearchValue} />
-            <BarcodeScannerButton showCamera={showCamera} setShowCamera={setShowCamera} />
+            <BarcodeScannerButton />
           </View>
           <ScrollableList
             style={{ maxHeight: 80, marginLeft: -8 }}
