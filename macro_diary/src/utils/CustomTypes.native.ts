@@ -2,11 +2,23 @@ import { ScreenEnum, IconTypeEnum, TabEnum } from "./CustomEnums.native";
 
 export interface TabItemType {
   id: TabEnum;
-  icon: string;
+  icon: MaterialIconsType | IoniconType;
   iconType: IconTypeEnum;
   title: string;
   screen: () => React.JSX.Element;
 }
+
+export type MaterialIconsType =
+  | 'add-circle'
+  | 'diary'
+  | 'format-list-bulleted'
+  | 'search';
+
+
+export type IoniconType =
+  | 'pie-chart'
+  | 'settings-outline';
+
 
 export interface ProductDataType {
   barcode: string;

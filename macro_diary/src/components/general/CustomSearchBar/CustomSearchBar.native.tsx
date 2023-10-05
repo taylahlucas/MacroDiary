@@ -19,6 +19,7 @@ const CustomSearchBar = ({ placeholder = 'Search recent scans...' }: CustomSearc
       <TextInput
         style={{...styles.textInput, color: theme.lightGrey }}
         placeholder={placeholder}
+        placeholderTextColor={theme.midGrey}
         onPressIn={(): void => setSearchValue('')}
         onChange={(event): void => setSearchValue(event.nativeEvent.text ?? '')}
       />
