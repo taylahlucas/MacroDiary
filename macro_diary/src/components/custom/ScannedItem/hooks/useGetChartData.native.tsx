@@ -17,7 +17,7 @@ const matchMacroToEnum = (macroType: MacroType): string[] => {
   return keys.map((key) => MacroEnum[key.toUpperCase() as keyof typeof MacroEnum]);
 }
 
-export function getChartData(macros: MacroType): ChartDataProps[] {
+export function useGetChartData(macros: MacroType): ChartDataProps[] {
   const data: ChartDataProps[] = []
   const macroString = matchMacroToEnum(macros);
   

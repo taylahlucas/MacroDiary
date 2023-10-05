@@ -5,7 +5,7 @@ import ScannedItemContent from './ScannedItemContent.native';
 import Spacing from '../../general/Spacing.native';
 import { styles } from './ScannedItemStyles.native';
 import CustomPieChart from '../../general/Charts/CustomPieChart.native';
-import { getChartData } from './hooks/useGetChartData.native';
+import { useGetChartData } from './hooks/useGetChartData.native';
 import Condition from '../../general/Condition.native';
 import StyledText from '../../general/Text/StyledText.native';
 
@@ -16,7 +16,7 @@ interface ScannedItemProps {
 
 const ScannedItem = ({ macros, isOpen = false }: ScannedItemProps) => {
   const theme = useGetTheme();
-  const data = getChartData(macros);
+  const data = useGetChartData(macros);
 
   return (
     <Condition condition={isOpen}>

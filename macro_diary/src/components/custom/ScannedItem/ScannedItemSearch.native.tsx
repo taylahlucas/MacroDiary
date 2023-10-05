@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 import { ProductDataType } from '../../../utils/CustomTypes.native';
 import CustomSearchBar from '../../general/CustomSearchBar/CustomSearchBar.native';
@@ -7,24 +7,15 @@ import ScannedItemList from './ScannedItemList.native';
 import ScrollableList from '../../../components/general/List/ScrollableList.native';
 import { styles } from './ScannedItemStyles.native';
 import BarcodeScannerButton from '../BarcodeScanner/BarcodeScannerButton.native';
-import { productDataMock } from '../../../mock/mockData.native';
 import { ScannedItemListTitle } from './ScannedItemStyledComponents.native';
+import useMainState from '../../../redux/hooks/useMainState.native';
 
 interface ScannedItemSearchProps {
   items: ProductDataType[];
 }
 
 const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
-  const [filteredItems, setFilteredItems] = useState<ProductDataType[]>(productDataMock);
-  // TODO: Move to custom hook when redux is added
-  // useEffect(() => {
-  //   if (searchValue.length > 2) {
-  //     setFilteredItems(items.filter((item) => item.title.includes(searchValue)));
-  //   }
-  //   else {
-  //     setFilteredItems(items);
-  //   }
-  // }, [searchValue, items])
+  const { filteredProductData } = useMainState();
 
   return (
     <Dropdown
@@ -45,7 +36,7 @@ const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
         </>
       }
       view={
-        <ScannedItemList items={filteredItems} />
+        <ScannedItemList items={filteredProductData} />
       }
     />
   );

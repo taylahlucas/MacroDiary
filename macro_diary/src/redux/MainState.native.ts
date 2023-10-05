@@ -6,6 +6,7 @@ export interface MainState {
   readonly searchValue: string;
   readonly barcodes: string[];
   readonly productData: ProductDataType[];
+  readonly filteredProductData: ProductDataType[];
   readonly selectedSearchTableIndex: number;
 }
 
@@ -14,6 +15,7 @@ export const initialState: MainState = {
   searchValue: '',
   barcodes: [],
   productData: [],
+  filteredProductData: [],
   selectedSearchTableIndex: 0
 }
 
@@ -33,6 +35,9 @@ const slice = createSlice({
     setProductData: (state, action) => {
       state.barcodes = action.payload;
     },
+    setFilteredProductData: (state, action) => {
+      state.filteredProductData = action.payload;
+    },
     setSelectedSearchTableIndex: (state, action) => {
       state.barcodes = action.payload;
     }
@@ -44,6 +49,7 @@ export const {
   setSearchValue,
   setBarcodes,
   setProductData,
+  setFilteredProductData,
   setSelectedSearchTableIndex 
 } = slice.actions;
 export default slice.reducer;

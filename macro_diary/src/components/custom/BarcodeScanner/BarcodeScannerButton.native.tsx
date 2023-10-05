@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { Dispatch } from 'redux';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import { BarcodeScannerButtonContainer } from './BarcodeScannerStyledComponents.native';
 import Icon from 'react-native-vector-icons/Ionicons';
