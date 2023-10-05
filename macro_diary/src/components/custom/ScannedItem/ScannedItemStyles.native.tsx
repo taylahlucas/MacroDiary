@@ -11,12 +11,13 @@ export const styles = StyleSheet.create({
   },
   scrollContainer: {
     width: 350,
-    borderRadius: 5,
+    borderRadius: 10,
     marginBottom: 16,
     alignSelf: 'center'
   },
   container: {
-    width: 350, 
+    // TODO: Make dynmic based on screen size & make this slightly thinner
+    width: 325,
     padding: 16,
     marginTop: -32,
     marginBottom: 16,
