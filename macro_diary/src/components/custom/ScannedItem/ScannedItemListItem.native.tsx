@@ -15,11 +15,13 @@ const ScannedItemListItem = ({ title, color, macros }: ScannedItemListItemProps)
 
   return (
     <Dropdown 
-      header={<SelectableListItem 
-        title={title} 
-        onClick={(): void => setOpenItem(!openItem)}
-        style={{ backgroundColor: color, minWidth: 350 }}
-      />}
+      header={
+        <SelectableListItem 
+          title={title} 
+          onClick={(): void => setOpenItem(!openItem)}
+          style={{ backgroundColor: color, minWidth: 350 }}
+        />
+      }
       view={<ScannedItem macros={macros} isOpen={openItem} />}
     />
   );

@@ -12,9 +12,8 @@ interface ScannedItemMenuItemProps {
 const ScannedItemMenuItem = ({ index, title }: ScannedItemMenuItemProps) => {
   const theme = useGetTheme();
   const { setSelectedSearchTableIndex } = useMainDispatch();
-  const { filteredProductData, selectedSearchTableIndex } = useMainState();
+  const { selectedSearchTableIndex } = useMainState();
   const isFocused = index === selectedSearchTableIndex;
-  console.log("HERE: ", selectedSearchTableIndex)
 
   return (
     <Pressable onPress={(): void => setSelectedSearchTableIndex(index)}>

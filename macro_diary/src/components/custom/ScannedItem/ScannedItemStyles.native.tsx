@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   },
   scrollContainer: {
     width: 350,
-    marginBottom: 130,
     borderRadius: 5,
     alignSelf: 'center'
   },

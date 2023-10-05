@@ -8,6 +8,7 @@ import CustomPieChart from '../../general/Charts/CustomPieChart.native';
 import { useGetChartData } from './hooks/useGetChartData.native';
 import Condition from '../../general/Condition.native';
 import StyledText from '../../general/Text/StyledText.native';
+import ScrollableList from '../../general/List/ScrollableList.native';
 
 interface ScannedItemProps {
   macros: MacroType;
@@ -20,19 +21,21 @@ const ScannedItem = ({ macros, isOpen = false }: ScannedItemProps) => {
 
   return (
     <Condition condition={isOpen}>
-      <View style={{ ...styles.container, backgroundColor: theme.darkGrey }}>
-        <Spacing height={16}/>
-        <View style={styles.chartContainer}>
-          <CustomPieChart isDonut={true} data={data} />
+      <ScrollableList style={styles.scrollContainer}>
+        <View style={{ ...styles.container, backgroundColor: theme.darkGrey }}>
+          <Spacing height={16}/>
+          <View style={styles.chartContainer}>
+            <CustomPieChart isDonut={true} data={data} />
+          </View>
+          <View style={{ marginLeft: 16 }}>
+            <StyledText type={'ListItemSubTitleBold'} align={'right'}>per 100g</StyledText>
+            <Spacing height={16} />
+            {Object.entries(data).map((name, index) => (
+              <ScannedItemContent key={index} name={name[1].title} amount={name[1].value} />
+            ))}
+          </View>
         </View>
-        <View style={{ marginLeft: 16 }}>
-          <StyledText type={'ListItemSubTitleBold'} align={'right'}>per 100g</StyledText>
-          <Spacing height={16} />
-          {Object.entries(data).map((name, index) => (
-            <ScannedItemContent key={index} name={name[1].title} amount={name[1].value} />
-          ))}
-        </View>
-      </View>
+      </ScrollableList>
     </Condition>
   );
 };

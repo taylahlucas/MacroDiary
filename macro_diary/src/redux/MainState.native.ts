@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { productDataMock } from "../mock/mockData.native";
 import { ProductDataType } from "../utils/CustomTypes.native";
 
 export interface MainState {
@@ -17,7 +18,7 @@ export const initialState: MainState = {
   searchValue: '',
   barcodes: [],
   productData: [],
-  filteredProductData: [],
+  filteredProductData: productDataMock,
   selectedSearchTableIndex: 0
 }
 

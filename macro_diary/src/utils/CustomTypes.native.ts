@@ -8,7 +8,7 @@ export interface TabItemType {
   screen: () => React.JSX.Element;
 }
 
-interface ScannedMenuListType {
+export interface ScannedMenuListType {
   id: SearchMenuListEnum;
   title: string;
 }
