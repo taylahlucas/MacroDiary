@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { ProductDataType } from '../../../utils/CustomTypes.native';
 import CustomSearchBar from '../../general/CustomSearchBar/CustomSearchBar.native';
@@ -9,15 +9,12 @@ import { styles } from './ScannedItemStyles.native';
 import BarcodeScannerButton from '../BarcodeScanner/BarcodeScannerButton.native';
 import { productDataMock } from '../../../mock/mockData.native';
 import { ScannedItemListTitle } from './ScannedItemStyledComponents.native';
-// import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
-import useMainState from '../../../redux/hooks/useMainState.native';
 
 interface ScannedItemSearchProps {
   items: ProductDataType[];
 }
 
 const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
-  const [searchValue, setSearchValue] = useState('')
   const [filteredItems, setFilteredItems] = useState<ProductDataType[]>(productDataMock);
   // TODO: Move to custom hook when redux is added
   // useEffect(() => {
@@ -34,7 +31,7 @@ const ScannedItemSearch = ({ items }: ScannedItemSearchProps) => {
       header={
         <>        
           <View style={styles.searchContainer}>
-            <CustomSearchBar setSearchValue={setSearchValue} />
+            <CustomSearchBar />
             <BarcodeScannerButton />
           </View>
           <ScrollableList

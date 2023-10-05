@@ -1,23 +1,20 @@
-import { CaseReducer, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { ProductDataType } from "../utils/CustomTypes.native";
 
 export interface MainState {
   readonly showCamera: boolean;
+  readonly searchValue: string;
+  readonly barcodes: string[];
+  readonly productData: ProductDataType[];
+  readonly selectedSearchTableIndex: number;
 }
 
 export const initialState: MainState = {
-  showCamera: false
-}
-
-const SET_SHOW_CAMERA = 'MainState/SET_SHOW_CAMERA';
-
-interface SetShowCameraAction {
-  type: typeof SET_SHOW_CAMERA;
-  payload: boolean;
-}
-
-export const setShowCameraReducer: CaseReducer<MainState, PayloadAction<boolean>> = (state, action) => { 
-  action.type
-  return { ...state, showCamera: action.payload }
+  showCamera: false,
+  searchValue: '',
+  barcodes: [],
+  productData: [],
+  selectedSearchTableIndex: 0
 }
 
 const slice = createSlice({
@@ -25,10 +22,28 @@ const slice = createSlice({
   initialState: initialState,
   reducers: {
     setShowCamera: (state, action) => {
-      state.showCamera = action.payload
+      state.showCamera = action.payload;
+    },
+    setSearchValue: (state, action) => {
+      state.searchValue = action.payload;
+    },
+    setBarcodes: (state, action) => {
+      state.barcodes  = action.payload
+    },
+    setProductData: (state, action) => {
+      state.barcodes = action.payload;
+    },
+    setSelectedSearchTableIndex: (state, action) => {
+      state.barcodes = action.payload;
     }
   }
 })
 
-export const { setShowCamera } = slice.actions 
+export const {
+  setShowCamera, 
+  setSearchValue,
+  setBarcodes,
+  setProductData,
+  setSelectedSearchTableIndex 
+} = slice.actions;
 export default slice.reducer;

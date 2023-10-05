@@ -3,17 +3,15 @@ import { View, TextInput } from 'react-native';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import { styles } from './CustomSearchBarStyles.native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
 
 interface CustomSearchBarProps {
   placeholder?: string;
-  setSearchValue: (value: string) => void;
 }
 
-const CustomSearchBar = ({ 
-  placeholder = 'Search recent scans...', 
-  setSearchValue, 
-}: CustomSearchBarProps): JSX.Element => {
+const CustomSearchBar = ({ placeholder = 'Search recent scans...' }: CustomSearchBarProps): JSX.Element => {
   const theme = useGetTheme();
+  const { setSearchValue } = useMainDispatch();
 
   return (
     <View style={{...styles.searchBarContainer, backgroundColor: theme.darkGrey}}>

@@ -12,17 +12,14 @@ import { ProductDataType } from '../utils/CustomTypes.native';
 import Button from '../components/general/Buttons/Button.native';
 import { ScreenEnum } from '../utils/CustomEnums.native';
 import useMainState from '../redux/hooks/useMainState.native';
+import useMainDispatch from '../redux/hooks/useMainDispatch.native';
 
 const Search = () => {
   const theme = useGetTheme();
   const navigation = useReactNavigation();
   const [hasPermission, setHasPermission] = useState(false);
-  // const [showCamera, setShowCamera] = useState(false);
-  const { showCamera } = useMainState();
-  // TODO: Move to redux
-  const [barcodes, setBarcodes] = useState<string[]>([]);
-  const [productData, setProductData] = useState<ProductDataType[]>([]);
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+  const { setBarcodes, setProductData, setSelectedSearchTableIndex } = useMainDispatch();
+  const { showCamera, barcodes, productData, selectedSearchTableIndex } = useMainState();
 
   // TODO: Move to redux
   useEffect(() => {

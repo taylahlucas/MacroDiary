@@ -7,6 +7,7 @@ import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import { ProductDataType } from '../../../utils/CustomTypes.native';
 import BarcodeScannerOverlay from './BarcodeScannerOverlay.native';
 import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
+import useHandleBarcodeScanned from './hooks/useHandleBarcodeScanned.native';
 
 interface BarCodeScannedParams {
   type: string;
@@ -23,53 +24,14 @@ interface BarcodeScannerProps {
 const BarcodeScanner = ({ barcodes, productData, setBarcodes, setProductData }: BarcodeScannerProps) => {
   const theme = useGetTheme();
   const { setShowCamera } = useMainDispatch();
-
-  // TODO: Move these to custom hooks
-  const handleBarCodeScanned = ({ type, data }: BarCodeScannedParams) => {
-    setShowCamera(false);
-    setBarcodes([...barcodes, data]);
-    if (!!barcodes.find((item) => item === data)) {
-      Alert.alert('Product already scanned');
-    }
-    else {
-      getInformation(data);
-    }
-  };
-
-  const getInformation = (data: string) => {
-    axios.get(`https://world.openfoodfacts.org/api/v2/product/${data}`)
-      .then(async (response) => {
-        const nutrientData = await response.data['product']['nutriments'];
-        if (!!nutrientData) {
-          const mappedData: ProductDataType = {
-            barcode: data,
-            title: response.data['product']['product_name'],
-            macros: {
-              calories: nutrientData['energy-kcal_100g'],
-              carbohydrates: nutrientData['carbohydrates_100g'],
-              fat: nutrientData['fat_100g'],
-              protein: nutrientData['proteins_100g'],
-              salt: nutrientData['salt_100g'],
-              saturatedFat: nutrientData['saturated-fat_100g'],
-              sodium: nutrientData['sodium_100g'],
-              sugar: nutrientData['sugars_100g']
-            }
-          }
-          setProductData([...productData, mappedData]);
-        }
-      })
-      .catch(function(error) {
-        console.log("Error scanning product: ", error.message)
-        Alert.alert('Cannot find product');
-      })
-  };
+  const { handleBarCodeScanned } = useHandleBarcodeScanned()
 
   return (
     <View style={styles.container}>
       {/* TODO: Change to icon button */}
       <Button 
         title={'x'} 
-        onPress={(): void => setShowBarcodeScanner(false)}
+        onPress={(): void => setShowCamera(false)}
         style={{...styles.exitButton, backgroundColor: theme.midGrey, justifyContent: 'center' }}  
       />
       <BarcodeScannerOverlay />
