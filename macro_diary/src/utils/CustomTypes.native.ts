@@ -1,4 +1,4 @@
-import { ScreenEnum, IconTypeEnum, TabEnum } from "./CustomEnums.native";
+import { ScreenEnum, IconTypeEnum, TabEnum, SearchMenuListEnum } from "./CustomEnums.native";
 
 export interface TabItemType {
   id: TabEnum;
@@ -7,6 +7,12 @@ export interface TabItemType {
   title: string;
   screen: () => React.JSX.Element;
 }
+
+interface ScannedMenuListType {
+  id: SearchMenuListEnum;
+  title: string;
+}
+
 
 export type MaterialIconsType =
   | 'add-circle'

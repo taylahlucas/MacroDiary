@@ -7,17 +7,13 @@ import ScannedItemSearch from '../components/custom/ScannedItem/ScannedItemSearc
 import Condition from '../components/general/Condition.native';
 import Spacing from '../components/general/Spacing.native';
 import useGetTheme from '../styles/hooks/useGetTheme.native';
-import Button from '../components/general/Buttons/Button.native';
-import { ScreenEnum } from '../utils/CustomEnums.native';
 import useMainState from '../redux/hooks/useMainState.native';
 import useMainDispatch from '../redux/hooks/useMainDispatch.native';
 import useGetBarcodeScannerPermissions from '../utils/hooks/useGetBarcodeScannerPermissions.native';
 
 const Search = () => {
   const theme = useGetTheme();
-  const navigation = useReactNavigation();
-  const { setBarcodes, setProductData, setSelectedSearchTableIndex } = useMainDispatch();
-  const { hasBarcodeScannerPermission, showCamera, barcodes, productData, selectedSearchTableIndex } = useMainState();
+  const { hasBarcodeScannerPermission, showCamera } = useMainState();
 
   useGetBarcodeScannerPermissions();
 
@@ -30,15 +26,10 @@ const Search = () => {
   }
   return (
     <StandardLayout>
-      <ScannedItemSearch items={productData} />
+      <ScannedItemSearch />
       <Spacing height={20} />
       <Condition condition={hasBarcodeScannerPermission && showCamera}>
-        <BarcodeScanner 
-          barcodes={barcodes}
-          productData={productData}
-          setBarcodes={setBarcodes}
-          setProductData={setProductData}
-        />
+        <BarcodeScanner />
       </Condition>
     </StandardLayout>
   );

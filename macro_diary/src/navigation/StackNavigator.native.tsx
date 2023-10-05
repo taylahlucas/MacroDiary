@@ -9,7 +9,7 @@ const Tab = createBottomTabNavigator();
 const StackNavigator: React.FunctionComponent = (): JSX.Element => {
   const headerOptions = useDefaultHeaderOptions();
   const tabList = useGetTabList();
-
+  
   // TODO: Add active icon
   return (
     <Tab.Navigator 

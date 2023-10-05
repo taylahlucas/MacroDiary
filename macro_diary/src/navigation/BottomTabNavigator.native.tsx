@@ -16,6 +16,7 @@ const BottomTabNavigator = ({ state, descriptors, navigation }: BottomTabBarProp
       {state.routes.map((route: any, index: number) => {
         return (
           <Pressable 
+            key={route.params.id}
             style={{ justifyContent: 'center' }}
             onPress={(): void =>  navigation.navigate(route.name)}
           >

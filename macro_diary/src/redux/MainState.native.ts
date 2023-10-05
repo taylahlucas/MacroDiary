@@ -38,13 +38,13 @@ const slice = createSlice({
       state.barcodes  = action.payload
     },
     setProductData: (state, action) => {
-      state.barcodes = action.payload;
+      state.productData = action.payload;
     },
     setFilteredProductData: (state, action) => {
       state.filteredProductData = action.payload;
     },
     setSelectedSearchTableIndex: (state, action) => {
-      state.barcodes = action.payload;
+      state.selectedSearchTableIndex = action.payload;
     }
   }
 })

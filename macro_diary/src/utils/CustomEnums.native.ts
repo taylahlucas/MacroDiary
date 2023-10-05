@@ -6,6 +6,12 @@ export enum TabEnum {
   SETTINGS
 }
 
+export enum SearchMenuListEnum {
+  SCANNED_ITEMS,
+  RECIPES,
+  CUSTOM_RECIPES
+}
+
 export enum ScreenEnum {
   Search = 'Search',
   Diary = 'Diary'
