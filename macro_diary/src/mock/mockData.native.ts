@@ -70,5 +70,33 @@ export const productDataMock: ProductDataType[] = [
       sodium: 10,
       sugar: 4
     }
+  },
+  {
+    barcode: '1239',
+    title: 'Steak',
+    macros: {
+      calories: 10,
+      carbohydrates: 20,
+      fat: 2,
+      protein: 20,
+      salt: 1,
+      saturatedFat: 20,
+      sodium: 10,
+      sugar: 4
+    }
+  },
+  {
+    barcode: '1240',
+    title: 'Chips',
+    macros: {
+      calories: 10,
+      carbohydrates: 20,
+      fat: 2,
+      protein: 20,
+      salt: 1,
+      saturatedFat: 20,
+      sodium: 10,
+      sugar: 4
+    }
   }
 ]

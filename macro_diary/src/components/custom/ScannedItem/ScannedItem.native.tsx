@@ -22,7 +22,7 @@ const ScannedItem = ({ macros, isOpen = false }: ScannedItemProps) => {
   return (
     <Condition condition={isOpen}>
       <ScrollableList style={styles.scrollContainer}>
-        <View style={{ ...styles.container, backgroundColor: theme.darkGrey }}>
+        <View style={{ ...styles.container, backgroundColor: theme.darkPurple }}>
           <Spacing height={16}/>
           <View style={styles.chartContainer}>
             <CustomPieChart isDonut={true} data={data} />

@@ -12,12 +12,13 @@ export const styles = StyleSheet.create({
   scrollContainer: {
     width: 350,
     borderRadius: 5,
+    marginBottom: 16,
     alignSelf: 'center'
   },
   container: {
     width: 350, 
     padding: 16,
-    marginTop: -12,
+    marginTop: -32,
     marginBottom: 16,
     borderRadius: 5
   },

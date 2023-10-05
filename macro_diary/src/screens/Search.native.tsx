@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text } from 'react-native';
-import useReactNavigation from '../navigation/hooks/useReactNavigation.native';
 import StandardLayout from "../components/general/Layouts/StandardLayout.native";
 import BarcodeScanner from '../components/custom/BarcodeScanner/BarcodeScanner.native';
 import ScannedItemSearch from '../components/custom/ScannedItem/ScannedItemSearch.native';
@@ -8,7 +7,6 @@ import Condition from '../components/general/Condition.native';
 import Spacing from '../components/general/Spacing.native';
 import useGetTheme from '../styles/hooks/useGetTheme.native';
 import useMainState from '../redux/hooks/useMainState.native';
-import useMainDispatch from '../redux/hooks/useMainDispatch.native';
 import useGetBarcodeScannerPermissions from '../utils/hooks/useGetBarcodeScannerPermissions.native';
 
 const Search = () => {
