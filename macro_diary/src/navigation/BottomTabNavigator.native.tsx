@@ -9,8 +9,8 @@ import { TabNavigatorContainer, BottomTabNavigatorIconBackground } from './Botto
 
 const BottomTabNavigator = ({ state, descriptors, navigation }: BottomTabBarProps): JSX.Element => {
   const theme = useGetTheme();
-
-  // TODO: Purple when selected && move to StyledComponents
+  
+  // TODO: Purple when selected && move to StyledComponents -- fix bgcolor
   return (
     <TabNavigatorContainer backgroundColor={theme.darkGrey}>
       {state.routes.map((route: any, index: number) => {
