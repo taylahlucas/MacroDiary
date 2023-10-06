@@ -17,6 +17,13 @@ export enum ScreenEnum {
   Diary = 'Diary'
 }
 
+export enum RecipeCategoryEnum {
+  BREAKFAST = 'breakfast',
+  LUNCH = 'lunch',
+  DINNER = 'dinner',
+  SNACK = 'snack'
+}
+
 export enum IconTypeEnum {
   MaterialIcons = 'MaterialIcons',
   Ionicons = 'Ionicons',

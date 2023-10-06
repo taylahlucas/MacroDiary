@@ -1,4 +1,4 @@
-import { ScreenEnum, IconTypeEnum, TabEnum, SearchMenuListEnum } from "./CustomEnums.native";
+import { ScreenEnum, IconTypeEnum, TabEnum, SearchMenuListEnum, RecipeCategoryEnum } from "./CustomEnums.native";
 
 export interface TabItemType {
   id: TabEnum;
@@ -13,6 +13,12 @@ export interface ScannedMenuListType {
   title: string;
 }
 
+export interface RecipeDataType {
+  id: number;
+  title: string;
+  category: RecipeCategoryEnum;
+  ingredients: ProductDataType[];
+}
 
 export type MaterialIconsType =
   | 'add-circle'
@@ -22,6 +28,8 @@ export type MaterialIconsType =
 
 
 export type IoniconType =
+  | 'arrow-back'
+  | 'arrow-forward'
   | 'pie-chart'
   | 'settings-outline';
 

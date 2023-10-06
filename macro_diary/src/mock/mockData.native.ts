@@ -1,3 +1,4 @@
+import { RecipeCategoryEnum } from "../utils/CustomEnums.native";
 import { ProductDataType } from "../utils/CustomTypes.native";
 
 export const productDataMock: ProductDataType[] = [
@@ -99,4 +100,31 @@ export const productDataMock: ProductDataType[] = [
       sugar: 4
     }
   }
-]
+];
+
+export const recipeDataMock = [
+  {
+    id: 1,
+    title: 'Cottage Pie',
+    category: RecipeCategoryEnum.LUNCH,
+    ingredients: productDataMock
+  },
+  {
+    id: 2,
+    title: 'Spaghetti Bolognese',
+    category: RecipeCategoryEnum.DINNER,
+    ingredients: productDataMock
+  },
+  {
+    id: 3,
+    title: 'Eggs on Toast',
+    category: RecipeCategoryEnum.BREAKFAST,
+    ingredients: productDataMock
+  },
+  {
+    id: 4,
+    title: 'Chicken wrap',
+    category: RecipeCategoryEnum.LUNCH,
+    ingredients: productDataMock
+  }
+];

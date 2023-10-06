@@ -4,12 +4,12 @@ import { IconTypeEnum } from '../../../utils/CustomEnums.native';
 
 interface IconProps {
   name: string;
-  type: IconTypeEnum;
-  color: string;
+  type?: IconTypeEnum;
+  color?: string;
   size?: number;
 }
 
-const Icon = ({ name, type, color, size = 32 }: IconProps) => {
+const Icon = ({ name, type = IconTypeEnum.MaterialIcons, color = 'white', size = 32 }: IconProps) => {
   switch (type) {
     case IconTypeEnum.MaterialIcons:
       return <MaterialIcon name={name} color={color} size={size} />
