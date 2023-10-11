@@ -7,7 +7,6 @@ import { WeekSelectionStyledComponents } from './WeekSelectionStyledComponents.n
 
 interface WeekSelectionProps {
   text: string;
-  canGoLeft: boolean;
   canGoRight: boolean;
   onLeftPress: () => void;
   onRightPress: () => void;
@@ -15,7 +14,6 @@ interface WeekSelectionProps {
 
 const WeekSelection = ({ 
   text,
-  canGoLeft = true,
   canGoRight = false,
   onLeftPress,
   onRightPress
@@ -29,7 +27,7 @@ const WeekSelection = ({
         <Icon
           name={'arrow-back'} 
           type={IconTypeEnum.Ionicons}
-          color={canGoLeft ? theme.midGrey : theme.darkGrey}
+          color={theme.midGrey}
         />
       </Pressable>
       <StyledText type={'ListItemSubTitleBold'}>{text}</StyledText>

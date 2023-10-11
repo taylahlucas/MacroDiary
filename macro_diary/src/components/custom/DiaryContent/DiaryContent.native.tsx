@@ -11,19 +11,18 @@ import useDiaryContentState from './hooks/useDiaryContentState.native';
 
 const DiaryContent = () => {
   const { setSelectedDiaryWeek } = useDiaryContentDispatch();
-  const { selectedDiaryWeek, selectedDiaryDates } = useDiaryContentState();
+  const { selectedDiaryWeek, selectedDiaryDates, canGoRight } = useDiaryContentState();
   
   useInitCurrentWeek();
   useSetDiaryWeekDates();
-  
+
   // TODO: Color purple for day of week + disabled color
   // TODO: Recipe dropdown
   return (
     <>
       <WeekSelection
         text={`${selectedDiaryDates[0]} - ${selectedDiaryDates[1]}`}
-        canGoLeft={true}
-        canGoRight={false}
+        canGoRight={canGoRight}
         onLeftPress={() => setSelectedDiaryWeek(selectedDiaryWeek - 1)}
         onRightPress={() => setSelectedDiaryWeek(selectedDiaryWeek + 1)}
       />
