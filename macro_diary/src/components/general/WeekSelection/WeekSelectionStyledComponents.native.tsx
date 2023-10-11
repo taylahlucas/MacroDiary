@@ -6,5 +6,5 @@ export const WeekSelectionStyledComponents = styled.View`
   padding: 16px; 
   margin-top: 16px; 
   justify-content: space-between;
-  align-ttems: center;
+  align-items: center;
 `;

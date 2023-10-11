@@ -4,15 +4,29 @@ import DaysOfWeek from '../../general/DaysOfWeek/DaysOfWeek.native';
 import ScrollableList from '../../general/List/ScrollableList.native';
 import Spacing from '../../general/Spacing.native';
 import WeekSelection from '../../general/WeekSelection/WeekSelection.native';
+import useSetDiaryWeekDates from './hooks/useSetDiaryWeekDates.native';
+import useInitCurrentWeek from './hooks/useInitCurrentWeek.native';
+import useDiaryContentDispatch from './hooks/useDiaryContentDispatch.native';
+import useDiaryContentState from './hooks/useDiaryContentState.native';
 
 const DiaryContent = () => {
-  const [selectedWeek, setSelectedWeek] = useState();
-    // TODO: Arrow button active if its possible to go backwards
+  const { setSelectedDiaryWeek } = useDiaryContentDispatch();
+  const { selectedDiaryWeek, selectedDiaryDates } = useDiaryContentState();
+  
+  useInitCurrentWeek();
+  useSetDiaryWeekDates();
+  
   // TODO: Color purple for day of week + disabled color
   // TODO: Recipe dropdown
   return (
     <>
-      <WeekSelection />
+      <WeekSelection
+        text={`${selectedDiaryDates[0]} - ${selectedDiaryDates[1]}`}
+        canGoLeft={true}
+        canGoRight={false}
+        onLeftPress={() => setSelectedDiaryWeek(selectedDiaryWeek - 1)}
+        onRightPress={() => setSelectedDiaryWeek(selectedDiaryWeek + 1)}
+      />
       <DaysOfWeek />
       <Spacing height={16} />
       <ScrollableList>

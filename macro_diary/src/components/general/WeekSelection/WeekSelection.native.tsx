@@ -1,28 +1,45 @@
+import { Pressable } from 'react-native';
 import { IconTypeEnum } from '../../../utils/CustomEnums.native';
 import Icon from '../../../components/general/Icon/Icon.native';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import StyledText from '../../../components/general/Text/StyledText.native';
 import { WeekSelectionStyledComponents } from './WeekSelectionStyledComponents.native';
-import useGetCurrentWeekDates from './hooks/useGetCurrentWeekDates.native';
 
-const WeekSelection = () => {
+interface WeekSelectionProps {
+  text: string;
+  canGoLeft: boolean;
+  canGoRight: boolean;
+  onLeftPress: () => void;
+  onRightPress: () => void;
+};
+
+const WeekSelection = ({ 
+  text,
+  canGoLeft = true,
+  canGoRight = false,
+  onLeftPress,
+  onRightPress
+}: WeekSelectionProps) => {
   const theme = useGetTheme();
-  const dates = useGetCurrentWeekDates();
   
   // TODO: Add changable dates
   return (
     <WeekSelectionStyledComponents>
-      <Icon
-        name={'arrow-back'} 
-        type={IconTypeEnum.Ionicons}
-        color={theme.darkGrey}
-      />
-      <StyledText type={'ListItemSubTitleBold'}>1 oct - 7 oct</StyledText>
-      <Icon 
-        name={'arrow-forward'} 
-        type={IconTypeEnum.Ionicons}
-        color={theme.darkGrey}
-      />
+      <Pressable onPress={onLeftPress}>
+        <Icon
+          name={'arrow-back'} 
+          type={IconTypeEnum.Ionicons}
+          color={canGoLeft ? theme.midGrey : theme.darkGrey}
+        />
+      </Pressable>
+      <StyledText type={'ListItemSubTitleBold'}>{text}</StyledText>
+      <Pressable onPress={onRightPress}>
+        <Icon 
+          name={'arrow-forward'} 
+          type={IconTypeEnum.Ionicons}
+          color={canGoRight ? theme.midGrey : theme.darkGrey}
+        />
+      </Pressable>
     </WeekSelectionStyledComponents>
   );
 };

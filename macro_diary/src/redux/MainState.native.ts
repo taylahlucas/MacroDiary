@@ -48,7 +48,7 @@ const slice = createSlice({
       state.selectedSearchTableIndex = action.payload;
     }
   }
-})
+});
 
 export const {
   setHasBarcodeScannerPermission,
