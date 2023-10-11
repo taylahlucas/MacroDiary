@@ -16,3 +16,5 @@ An application which tracks macro and vitamin intake built using React Native &a
 - @reduxjs/toolkit
   - react-redux
   - redux-logger && @types/redux-logger
+- styled-components
+  - @types/styled-components

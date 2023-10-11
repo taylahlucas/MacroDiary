@@ -5,11 +5,13 @@ import { DaysOfWeekContainer, DaysOfWeekItem } from './DaysOfWeekStyledComponent
 const DaysOfWeek = () => {
   const theme = useGetTheme();
   const daysOfWeek = ["M", "Tu", "W", "Th", "F", "Sa", "Su"];
-  
+  let props = {
+    backgroundColor: theme.darkGrey
+  }
   return (
     <DaysOfWeekContainer>
       {daysOfWeek.map(day => 
-        <DaysOfWeekItem backgroundColor={theme.darkGrey}>
+        <DaysOfWeekItem { ...props }>
           <StyledText type={'ListItemTitleBold'}>{day}</StyledText>
         </DaysOfWeekItem>
       )}
