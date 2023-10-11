@@ -17,14 +17,15 @@ const RecipeItemList = () => {
 
   return (
     <>
-      {sections.map(section => {
+      {sections.map((section, index) => {
         const recipes = recipeDataMock.filter(item => item.category === section);
         return (
-          <View key={section} style={{ width: 350 }}>
+          <View key={index} style={{ width: 350 }}>
             <StyledText type={'ListItemSubTitleBold'} align={'left'}>{section}</StyledText>
             <Spacing height={16} />
             {recipes.map(recipe =>
               <RecipeItemListItem
+                key={recipe.id}
                 title={recipe.title}
                 color={theme.darkGrey}
                 ingredients={recipe.ingredients}

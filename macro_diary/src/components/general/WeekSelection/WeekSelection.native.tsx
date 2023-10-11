@@ -3,9 +3,11 @@ import Icon from '../../../components/general/Icon/Icon.native';
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import StyledText from '../../../components/general/Text/StyledText.native';
 import { WeekSelectionStyledComponents } from './WeekSelectionStyledComponents.native';
+import useGetCurrentWeekDates from './hooks/useGetCurrentWeekDates.native';
 
 const WeekSelection = () => {
   const theme = useGetTheme();
+  const dates = useGetCurrentWeekDates();
   
   // TODO: Add changable dates
   return (

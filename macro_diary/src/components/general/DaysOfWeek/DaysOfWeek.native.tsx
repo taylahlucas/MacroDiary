@@ -11,7 +11,7 @@ const DaysOfWeek = () => {
   return (
     <DaysOfWeekContainer>
       {daysOfWeek.map(day => 
-        <DaysOfWeekItem { ...props }>
+        <DaysOfWeekItem key={day} { ...props }>
           <StyledText type={'ListItemTitleBold'}>{day}</StyledText>
         </DaysOfWeekItem>
       )}
