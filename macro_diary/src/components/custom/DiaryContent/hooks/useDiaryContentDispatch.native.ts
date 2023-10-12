@@ -1,14 +1,18 @@
-import moment from 'moment';
 import { Dispatch } from 'redux';
 import { useAppDispatch } from '../../../../redux/store.native';
-import { DaysOfWeekEnum } from '../../../../utils/CustomEnums.native';
-import { setSelectedDiaryWeek, setSelectedDiaryDates, setCanGoRight, setSelectedDay } from '../DiaryContentState.native';
+import { 
+  setSelectedDiaryWeek, 
+  setSelectedDiaryDates, 
+  setCanGoRight, 
+  setSelectedDay, 
+  SelectedDayType 
+} from '../DiaryContentState.native';
 
 interface DiaryContentDispatch {
   setSelectedDiaryWeek: (value: number) => void;
   setSelectedDiaryDates: (value: string[]) => void;
   setCanGoRight: (value: boolean) => void;
-  setSelectedDay: (value: DaysOfWeekEnum) => void;
+  setSelectedDay: (value: SelectedDayType) => void;
 }
 
 const useDiaryContentDispatch = (): DiaryContentDispatch => {
@@ -24,7 +28,7 @@ const useDiaryContentDispatch = (): DiaryContentDispatch => {
     setCanGoRight(value: boolean): void {
       dispatch(setCanGoRight(value));
     },
-    setSelectedDay(value: DaysOfWeekEnum): void {
+    setSelectedDay(value: SelectedDayType): void {
       dispatch(setSelectedDay(value));
     }
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import RecipeItemList from '..//RecipeItem/RecipeItemList.native';
 import DaysOfWeek from '../../general/DaysOfWeek/DaysOfWeek.native';
 import ScrollableList from '../../general/List/ScrollableList.native';
@@ -9,10 +9,11 @@ import useInitCurrentWeek from './hooks/useInitCurrentWeek.native';
 import useDiaryContentDispatch from './hooks/useDiaryContentDispatch.native';
 import useDiaryContentState from './hooks/useDiaryContentState.native';
 import useGetFormattedDateForPeriod from '../../general/WeekSelection/hooks/useGetFormattedDateForPeriod.native';
+import moment from 'moment';
 
 const DiaryContent = () => {
   const { setSelectedDiaryWeek, setSelectedDay } = useDiaryContentDispatch();
-  const { selectedDiaryWeek, selectedDiaryDates, canGoRight, selectedDay } = useDiaryContentState();
+  const { selectedDiaryWeekPeriod, selectedDiaryDates, canGoRight, selectedDay } = useDiaryContentState();
   const getFormattedDateForPeriod = useGetFormattedDateForPeriod();
   
   useInitCurrentWeek();
@@ -24,8 +25,20 @@ const DiaryContent = () => {
       <WeekSelection
         text={`${getFormattedDateForPeriod(selectedDiaryDates[0])} - ${getFormattedDateForPeriod(selectedDiaryDates[1])}`}
         canGoRight={canGoRight}
-        onLeftPress={() => setSelectedDiaryWeek(selectedDiaryWeek - 1)}
-        onRightPress={() => setSelectedDiaryWeek(selectedDiaryWeek + 1)}
+        onLeftPress={() => {
+          setSelectedDiaryWeek(selectedDiaryWeekPeriod - 1);
+          setSelectedDay({
+            ...selectedDay,
+            date: moment(selectedDay.date).subtract(7, 'day').format()
+          })
+        }}
+        onRightPress={() => {
+          setSelectedDiaryWeek(selectedDiaryWeekPeriod + 1);
+          setSelectedDay({
+            ...selectedDay,
+            date: moment(selectedDay.date).add(7, 'day').format()
+          })
+        }}
       />
       <DaysOfWeek selectedDay={selectedDay} setSelectedDay={setSelectedDay} weekRange={selectedDiaryDates} />
       <Spacing height={16} />

@@ -18,6 +18,7 @@ export interface RecipeDataType {
   title: string;
   category: RecipeCategoryEnum;
   ingredients: ProductDataType[];
+  dateAdded: string;
 }
 
 export type MaterialIconsType =

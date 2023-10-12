@@ -6,19 +6,19 @@ import useDiaryContentState from './useDiaryContentState.native';
 
 const useSetDiaryWeekDates = () => {
   const { setSelectedDiaryDates, setCanGoRight } = useDiaryContentDispatch();
-  const { selectedDiaryWeek, selectedDiaryDates } = useDiaryContentState();
+  const { selectedDiaryWeekPeriod, selectedDiaryDates } = useDiaryContentState();
   const getWeekDatesForPeriod = useGetWeekDatesForPeriod();
   const getWeekPeriod  = useGetWeekPeriod();
   
-  const weekDates = getWeekDatesForPeriod(selectedDiaryWeek);
+  const weekDates = getWeekDatesForPeriod(selectedDiaryWeekPeriod);
 
   const today = new Date();
   const weekNumber = getWeekPeriod(today);
 
   useEffect(() => {
     setSelectedDiaryDates(weekDates)
-    setCanGoRight(selectedDiaryWeek < weekNumber);
-  }, [selectedDiaryWeek])
+    setCanGoRight(selectedDiaryWeekPeriod < weekNumber);
+  }, [selectedDiaryWeekPeriod])
 };
 
 export default useSetDiaryWeekDates

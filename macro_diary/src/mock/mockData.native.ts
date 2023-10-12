@@ -1,5 +1,6 @@
+import moment from "moment";
 import { RecipeCategoryEnum } from "../utils/CustomEnums.native";
-import { ProductDataType } from "../utils/CustomTypes.native";
+import { ProductDataType, RecipeDataType } from "../utils/CustomTypes.native";
 
 export const productDataMock: ProductDataType[] = [
   {
@@ -102,29 +103,54 @@ export const productDataMock: ProductDataType[] = [
   }
 ];
 
-export const recipeDataMock = [
+export const recipeDataMock: RecipeDataType[] = [
   {
     id: 1,
     title: 'Cottage Pie',
     category: RecipeCategoryEnum.LUNCH,
-    ingredients: productDataMock
+    ingredients: productDataMock,
+    dateAdded: moment().format()
   },
   {
     id: 2,
     title: 'Spaghetti Bolognese',
     category: RecipeCategoryEnum.DINNER,
-    ingredients: productDataMock
+    ingredients: productDataMock,
+    dateAdded: moment().subtract(1, 'day').format()
   },
   {
     id: 3,
     title: 'Eggs on Toast',
     category: RecipeCategoryEnum.BREAKFAST,
-    ingredients: productDataMock
+    ingredients: productDataMock,
+    dateAdded:  moment().subtract(2, 'day').format()
   },
   {
     id: 4,
     title: 'Chicken wrap',
     category: RecipeCategoryEnum.LUNCH,
-    ingredients: productDataMock
+    ingredients: productDataMock,
+    dateAdded: moment().subtract(2, 'day').format()
+  },
+  {
+    id: 5,
+    title: 'Oats',
+    category: RecipeCategoryEnum.BREAKFAST,
+    ingredients: productDataMock,
+    dateAdded: moment().subtract(3, 'day').format()
+  },
+  {
+    id: 6,
+    title: 'Burrito',
+    category: RecipeCategoryEnum.LUNCH,
+    ingredients: productDataMock,
+    dateAdded: moment().subtract(3, 'day').format()
+  },
+  {
+    id: 8,
+    title: 'Salad',
+    category: RecipeCategoryEnum.DINNER,
+    ingredients: productDataMock,
+    dateAdded: moment().subtract(4, 'day').format()
   }
 ];

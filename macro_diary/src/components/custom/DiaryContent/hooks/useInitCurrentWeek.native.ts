@@ -1,9 +1,12 @@
 import { useEffect } from "react";
+import moment from "moment";
 import useDiaryContentDispatch from "./useDiaryContentDispatch.native";
 import useGetWeekPeriod from '../../../general/WeekSelection/hooks/useGetWeekPeriod.native';
+import useDiaryContentState from "./useDiaryContentState.native";
+import { daysOfWeek } from "../../../../utils/Constants.native";
 
 const useInitCurrentWeek = () => {
-  const { setSelectedDiaryWeek } = useDiaryContentDispatch();
+  const { setSelectedDiaryWeek, setSelectedDay } = useDiaryContentDispatch();
   const getWeekPeriod = useGetWeekPeriod();
   
   const today = new Date();
@@ -11,6 +14,10 @@ const useInitCurrentWeek = () => {
 
   useEffect(() => {
     setSelectedDiaryWeek(weekNumber);
+    setSelectedDay({
+      day: daysOfWeek[moment().day() - 1],
+      date: moment().format()
+    })
   }, [])
 };
 

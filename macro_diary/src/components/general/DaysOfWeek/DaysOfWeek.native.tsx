@@ -1,13 +1,13 @@
 import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import { DaysOfWeekEnum } from '../../../utils/CustomEnums.native';
 import { daysOfWeek } from '../../../utils/Constants.native';
 import StyledText from "../Text/StyledText.native";
 import { DaysOfWeekContainer, DaysOfWeekItem } from './DaysOfWeekStyledComponents.native';
 import moment from 'moment';
+import { SelectedDayType } from '../../custom/DiaryContent/DiaryContentState.native';
 
 interface DaysOfWeekProps {
-  selectedDay: DaysOfWeekEnum;
-  setSelectedDay: (value: DaysOfWeekEnum) => void;
+  selectedDay: SelectedDayType;
+  setSelectedDay: (value: SelectedDayType) => void;
   // TODO: Make custom component
   weekRange: string[];
 }
@@ -20,10 +20,10 @@ const DaysOfWeek = ({ selectedDay, setSelectedDay, weekRange }: DaysOfWeekProps)
     <DaysOfWeekContainer>
       {daysOfWeek.map((day, index) => {
         const isSelectable = moment(weekRange[0]).add(index + 1, 'day') <= today;
-        const backgroundColor = day === selectedDay && isSelectable ? theme.lightPurple : (
+        const backgroundColor = day === selectedDay.day && isSelectable ? theme.lightPurple : (
           isSelectable ? theme.darkGrey : theme.darkGrey
         );
-        const textColor = day === selectedDay && isSelectable ? theme.lightestGrey : (
+        const textColor = day === selectedDay.day && isSelectable ? theme.lightestGrey : (
           isSelectable ? theme.midGrey : theme.black
         );
 
@@ -32,7 +32,10 @@ const DaysOfWeek = ({ selectedDay, setSelectedDay, weekRange }: DaysOfWeekProps)
             key={day} 
             backgroundColor={backgroundColor}
             disabled={!isSelectable}
-            onPress={(): void => setSelectedDay(day)}
+            onPress={(): void => setSelectedDay({
+              day: day,
+              date: moment(weekRange[0]).add(index + 1, 'day').format()
+            })}
           >
             <StyledText 
               type={'ListItemTitleBold'} 
