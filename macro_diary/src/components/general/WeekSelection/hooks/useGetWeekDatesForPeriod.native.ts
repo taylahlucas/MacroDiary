@@ -1,34 +1,25 @@
-import { months } from "../../../../utils/Constants.native";
+import moment from 'moment';
 
 const useGetWeekDatesForPeriod = () => {
   const getWeekDatesForPeriod = (weekNumber: number): string[] => {
-    const year = new Date().getFullYear();
-
-    const getFormattedDate = (date: Date): string => {
-      const day = String(date.getDate());
-
-      return `${day} ${months[date.getMonth()]}`;
-    };
+    const year = moment().year();
+    const firstDayOfYear = moment(`${year}-01-01`, 'YYYY-MM-DD');
   
-    const januaryFirst = new Date(year, 0, 1);
-    const firstDayOfYear = januaryFirst.getDay();
-    const daysOffset = firstDayOfYear > 4 ? 7 - firstDayOfYear : 1 - firstDayOfYear;
+    // Calculate the start date of the first week
+    const firstWeekStart = firstDayOfYear.day() > 0 ? firstDayOfYear.day(8) : firstDayOfYear;
   
-    const firstSaturday = new Date(year, 0, 1 + daysOffset);
-    const daysToAdd = (weekNumber - 1) * 7;
-    firstSaturday.setDate(firstSaturday.getDate() + daysToAdd);
-  
-    const weekDates: string[] = [];
+    // Calculate the start date of the desired week
+    const startOfWeek = firstWeekStart.clone().add((weekNumber - 1) * 7, 'days');
     
-    const date = new Date(firstSaturday);
-    date.setDate(firstSaturday.getDate());
-    weekDates.push(getFormattedDate(date));
-    date.setDate(firstSaturday.getDate() + 6);
-    weekDates.push(getFormattedDate(date));
+    const endOfWeek = startOfWeek.clone().add(6, 'days');
+
+    const weekDates: string[] = [
+      startOfWeek.format(),
+      endOfWeek.format()
+    ];
   
     return weekDates;
   };
-
 
   return getWeekDatesForPeriod;
 };

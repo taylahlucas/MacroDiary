@@ -6,10 +6,10 @@ import useDiaryContentState from './useDiaryContentState.native';
 
 const useSetDiaryWeekDates = () => {
   const { setSelectedDiaryDates, setCanGoRight } = useDiaryContentDispatch();
-  const { selectedDiaryWeek } = useDiaryContentState();
+  const { selectedDiaryWeek, selectedDiaryDates } = useDiaryContentState();
   const getWeekDatesForPeriod = useGetWeekDatesForPeriod();
   const getWeekPeriod  = useGetWeekPeriod();
-    
+  
   const weekDates = getWeekDatesForPeriod(selectedDiaryWeek);
 
   const today = new Date();

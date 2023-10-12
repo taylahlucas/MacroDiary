@@ -1,3 +1,4 @@
+import { DaysOfWeekEnum } from './CustomEnums.native';
 export const months = [
   'jan',
   'feb',
@@ -11,4 +12,14 @@ export const months = [
   'oct',
   'nov',
   'dex'
+];
+
+export const daysOfWeek = [
+  DaysOfWeekEnum.MONDAY, 
+  DaysOfWeekEnum.TUESDAY,
+  DaysOfWeekEnum.WEDNESDAY,
+  DaysOfWeekEnum.THURSDAY,
+  DaysOfWeekEnum.FRIDAY,
+  DaysOfWeekEnum.SATURDAY,
+  DaysOfWeekEnum.SUNDAY
 ];

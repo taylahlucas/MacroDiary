@@ -11,7 +11,7 @@ interface DaysOfWeekItemProps {
   backgroundColor: string;
 }
 
-export const DaysOfWeekItem = styled.View<DaysOfWeekItemProps>`
+export const DaysOfWeekItem = styled.Pressable<DaysOfWeekItemProps>`
   height: 40px;
   width: 40px;
   background-color: ${props => props.backgroundColor};

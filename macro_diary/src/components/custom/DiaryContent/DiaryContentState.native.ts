@@ -1,15 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { DaysOfWeekEnum } from "../../../utils/CustomEnums.native";
 
 export interface DiaryContentState {
   readonly selectedDiaryWeek: number;
   readonly selectedDiaryDates: string[];
   readonly canGoRight: boolean;
+  readonly selectedDay: DaysOfWeekEnum;
 }
 
 export const initialState: DiaryContentState = {
   selectedDiaryWeek: 0,
   selectedDiaryDates: [],
-  canGoRight: false
+  canGoRight: false,
+  selectedDay: DaysOfWeekEnum.MONDAY
 };
 
 const slice = createSlice({
@@ -24,6 +27,9 @@ const slice = createSlice({
     },
     setCanGoRight: (state, action) => {
       state.canGoRight = action.payload;
+    },
+    setSelectedDay: (state, action) => {
+      state.selectedDay = action.payload;
     }
   }
 });
@@ -31,6 +37,7 @@ const slice = createSlice({
 export const {
   setSelectedDiaryWeek,
   setSelectedDiaryDates,
-  setCanGoRight
+  setCanGoRight,
+  setSelectedDay
 } = slice.actions;
 export default slice.reducer;

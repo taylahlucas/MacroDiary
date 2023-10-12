@@ -39,3 +39,13 @@ export enum MacroEnum {
   SODIUM = 'sodium',
   SUGAR = 'sugar'
 }
+
+export enum DaysOfWeekEnum {
+  MONDAY = "M",
+  TUESDAY = "Tu",
+  WEDNESDAY = "W",
+  THURSDAY = "Th",
+  FRIDAY = "F",
+  SATURDAY = "Sa",
+  SUNDAY = "Su"
+}

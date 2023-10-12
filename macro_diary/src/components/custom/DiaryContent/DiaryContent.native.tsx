@@ -8,25 +8,26 @@ import useSetDiaryWeekDates from './hooks/useSetDiaryWeekDates.native';
 import useInitCurrentWeek from './hooks/useInitCurrentWeek.native';
 import useDiaryContentDispatch from './hooks/useDiaryContentDispatch.native';
 import useDiaryContentState from './hooks/useDiaryContentState.native';
+import useGetFormattedDateForPeriod from '../../general/WeekSelection/hooks/useGetFormattedDateForPeriod.native';
 
 const DiaryContent = () => {
-  const { setSelectedDiaryWeek } = useDiaryContentDispatch();
-  const { selectedDiaryWeek, selectedDiaryDates, canGoRight } = useDiaryContentState();
+  const { setSelectedDiaryWeek, setSelectedDay } = useDiaryContentDispatch();
+  const { selectedDiaryWeek, selectedDiaryDates, canGoRight, selectedDay } = useDiaryContentState();
+  const getFormattedDateForPeriod = useGetFormattedDateForPeriod();
   
   useInitCurrentWeek();
   useSetDiaryWeekDates();
 
-  // TODO: Color purple for day of week + disabled color
   // TODO: Recipe dropdown
   return (
     <>
       <WeekSelection
-        text={`${selectedDiaryDates[0]} - ${selectedDiaryDates[1]}`}
+        text={`${getFormattedDateForPeriod(selectedDiaryDates[0])} - ${getFormattedDateForPeriod(selectedDiaryDates[1])}`}
         canGoRight={canGoRight}
         onLeftPress={() => setSelectedDiaryWeek(selectedDiaryWeek - 1)}
         onRightPress={() => setSelectedDiaryWeek(selectedDiaryWeek + 1)}
       />
-      <DaysOfWeek />
+      <DaysOfWeek selectedDay={selectedDay} setSelectedDay={setSelectedDay} weekRange={selectedDiaryDates} />
       <Spacing height={16} />
       <ScrollableList>
         <RecipeItemList />
