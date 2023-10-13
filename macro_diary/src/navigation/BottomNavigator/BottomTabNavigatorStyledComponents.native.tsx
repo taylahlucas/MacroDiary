@@ -1,10 +1,11 @@
+import { SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
 
 interface TabNavigatorContainerProps {
   backgroundColor: string;
 };
 
-export const TabNavigatorContainer = styled.SafeAreaView<TabNavigatorContainerProps>`
+export const TabNavigatorContainer = styled(SafeAreaView)<TabNavigatorContainerProps>`
   height: 100px;
   background-color: ${props => props.backgroundColor};
   flex-direction: row;

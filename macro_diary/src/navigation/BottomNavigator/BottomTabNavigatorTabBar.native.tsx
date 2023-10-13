@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, View } from 'react-native';
+import { Pressable } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import useGetTheme from '../../styles/hooks/useGetTheme.native';
 import Icon from '../../components/general/Icon/Icon.native';

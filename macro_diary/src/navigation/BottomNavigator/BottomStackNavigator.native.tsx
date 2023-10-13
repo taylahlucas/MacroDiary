@@ -1,6 +1,5 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AddRecipeModal from "../../screens/AddRecipeModal.native";
-import { ScreenEnum } from '../../utils/CustomEnums.native';
 
 const Stack = createNativeStackNavigator();
 

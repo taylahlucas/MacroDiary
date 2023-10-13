@@ -6,16 +6,17 @@ import BarcodeScannerOverlay from './BarcodeScannerOverlay.native';
 import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
 import useHandleBarcodeScanned from './hooks/useHandleBarcodeScanned.native';
 import ExitButton from '../../general/Buttons/ExitButton.native';
+import { BarcodeScannerExitButton } from './BarcodeScannerStyledComponents.native';
 
 const BarcodeScanner = () => {
-  const theme = useGetTheme();
   const { setShowCamera } = useMainDispatch();
   const { handleBarCodeScanned  } = useHandleBarcodeScanned()
 
   return (
     <View style={styles.container}>
-      {/* TODO: Change to icon button */}
-      <ExitButton onPress={(): void => setShowCamera(false)} />
+      <BarcodeScannerExitButton>
+        <ExitButton onPress={(): void => setShowCamera(false)} />
+      </BarcodeScannerExitButton>
       <BarcodeScannerOverlay />
       <BarCodeScanner
         onBarCodeScanned={handleBarCodeScanned}

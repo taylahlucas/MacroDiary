@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   searchBarContainer: {
     height: 45, 
     width: '80%',
+    marginRight: 16,
     borderRadius: 5,
     justifyContent: 'center'
   },
