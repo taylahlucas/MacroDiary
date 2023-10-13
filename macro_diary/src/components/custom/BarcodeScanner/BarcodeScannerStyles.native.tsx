@@ -11,15 +11,6 @@ export const styles = StyleSheet.create({
   barcodeScanner: {
     flex: 1
   },
-  exitButton: {
-    width: 30, 
-    height: 30, 
-    position: 'absolute',
-    zIndex: 5,
-    right: 16,
-    top: 10,
-    borderRadius: 15
-  },
   overlayTop: {
     height: '40%',
     width: '100%', 

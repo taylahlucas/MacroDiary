@@ -9,7 +9,6 @@ const BarcodeScannerOverlay = () => {
       <View style={styles.overlayLeft} />
       <View style={styles.overlayRight} />
     </>
-    
   );
 };
 

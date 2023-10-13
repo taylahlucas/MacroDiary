@@ -1,12 +1,12 @@
 import { createBottomTabNavigator, BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { ScreenEnum } from '../utils/CustomEnums.native';
+import { ScreenEnum, TabEnum } from '../../utils/CustomEnums.native';
 import useDefaultHeaderOptions from './hooks/useDefaultHeaderOptions.native';
-import BottomTabNavigator from './BottomTabNavigator.native';
+import BottomTabNavigatorTabBar from './BottomTabNavigatorTabBar.native';
 import useGetTabList from './hooks/useGetTabList.native';
 
 const Tab = createBottomTabNavigator();
 
-const StackNavigator: React.FunctionComponent = (): JSX.Element => {
+const BottomNavigator: React.FunctionComponent = (): JSX.Element => {
   const headerOptions = useDefaultHeaderOptions();
   const tabList = useGetTabList();
   
@@ -15,9 +15,9 @@ const StackNavigator: React.FunctionComponent = (): JSX.Element => {
     <Tab.Navigator 
       initialRouteName={ScreenEnum.Search} 
       screenOptions={headerOptions}
-      tabBar={(props: BottomTabBarProps): JSX.Element => <BottomTabNavigator {...props} />}
+      tabBar={(props: BottomTabBarProps): JSX.Element => <BottomTabNavigatorTabBar {...props} />}
     >
-      {tabList.map(tab => 
+      {tabList.map(tab =>
         <Tab.Screen
           key={tab.id}
           name={tab.title}
@@ -33,4 +33,4 @@ const StackNavigator: React.FunctionComponent = (): JSX.Element => {
   );
 };
 
-export default StackNavigator;
+export default BottomNavigator;

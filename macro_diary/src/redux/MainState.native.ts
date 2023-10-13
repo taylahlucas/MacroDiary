@@ -5,6 +5,7 @@ import { ProductDataType } from "../utils/CustomTypes.native";
 export interface MainState {
   readonly hasBarcodeScannerPermission: boolean;
   readonly showCamera: boolean;
+  readonly showAddRecipeModal: boolean;
   readonly searchValue: string;
   readonly barcodes: string[];
   readonly productData: ProductDataType[];
@@ -14,6 +15,7 @@ export interface MainState {
 
 export const initialState: MainState = {
   hasBarcodeScannerPermission: false,
+  showAddRecipeModal: false,
   showCamera: false,
   searchValue: '',
   barcodes: [],
@@ -31,6 +33,9 @@ const slice = createSlice({
     },
     setShowCamera: (state, action) => {
       state.showCamera = action.payload;
+    },
+    setShowAddRecipeModal: (state, action) => {
+      state.showAddRecipeModal = action.payload;
     },
     setSearchValue: (state, action) => {
       state.searchValue = action.payload;
@@ -52,6 +57,7 @@ const slice = createSlice({
 
 export const {
   setHasBarcodeScannerPermission,
+  setShowAddRecipeModal,
   setShowCamera, 
   setSearchValue,
   setBarcodes,

@@ -2,6 +2,7 @@ export enum TabEnum {
   SEARCH,
   DIARY,
   ADD_RECIPE,
+  NULL,
   CHARTS,
   SETTINGS
 }
@@ -14,7 +15,8 @@ export enum SearchMenuListEnum {
 
 export enum ScreenEnum {
   Search = 'Search',
-  Diary = 'Diary'
+  Diary = 'Diary',
+  AddRecipeModal = 'AddRecipeModal'
 }
 
 export enum RecipeCategoryEnum {

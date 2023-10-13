@@ -3,6 +3,7 @@ import { ProductDataType } from '../../utils/CustomTypes.native';
 import { 
   setHasBarcodeScannerPermission,
   setShowCamera,
+  setShowAddRecipeModal,
   setSearchValue,
   setBarcodes,
   setProductData,
@@ -14,6 +15,7 @@ import { useAppDispatch } from '../store.native';
 interface MainDispatch {
   setHasBarcodeScannerPermission: (value: boolean) => void;
   setShowCamera: (value: boolean) => void;
+  setShowAddRecipeModal: (value: boolean) => void;
   setSearchValue: (value: string) => void;
   setBarcodes: (value: string[]) => void;
   setProductData: (value: ProductDataType[]) => void;
@@ -30,6 +32,9 @@ const useMainDispatch = (): MainDispatch => {
     },
     setShowCamera(value: boolean): void {
       dispatch(setShowCamera(value));
+    },
+    setShowAddRecipeModal(value: boolean): void {
+      dispatch(setShowAddRecipeModal(value));
     },
     setSearchValue(value: string): void {
       dispatch(setSearchValue(value));

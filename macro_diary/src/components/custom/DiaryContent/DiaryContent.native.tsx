@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import RecipeItemList from '..//RecipeItem/RecipeItemList.native';
 import DaysOfWeek from '../../general/DaysOfWeek/DaysOfWeek.native';
 import ScrollableList from '../../general/List/ScrollableList.native';
@@ -9,7 +10,6 @@ import useInitCurrentWeek from './hooks/useInitCurrentWeek.native';
 import useDiaryContentDispatch from './hooks/useDiaryContentDispatch.native';
 import useDiaryContentState from './hooks/useDiaryContentState.native';
 import useGetFormattedDateForPeriod from '../../general/WeekSelection/hooks/useGetFormattedDateForPeriod.native';
-import moment from 'moment';
 
 const DiaryContent = () => {
   const { setSelectedDiaryWeek, setSelectedDay } = useDiaryContentDispatch();

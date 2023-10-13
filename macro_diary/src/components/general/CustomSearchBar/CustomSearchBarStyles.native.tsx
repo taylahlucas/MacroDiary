@@ -7,6 +7,13 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center'
   },
+  searchContainerWithBarcode: {
+    marginRight: 8,
+    marginLeft: 8,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+  },
   searchBarIcon: {
     position: 'absolute',
     marginLeft: 16
