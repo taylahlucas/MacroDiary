@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { ProductDataType } from '../../utils/CustomTypes.native';
+import { ProductDataType } from '@utils/CustomTypes.native';
 import { 
   setHasBarcodeScannerPermission,
   setShowCamera,

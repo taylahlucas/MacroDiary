@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { productDataMock } from "../mock/mockData.native";
-import { ProductDataType } from "../utils/CustomTypes.native";
+import { productDataMock } from "@mock/mockData.native";
+import { ProductDataType } from "@utils/CustomTypes.native";
 
 export interface MainState {
   readonly hasBarcodeScannerPermission: boolean;

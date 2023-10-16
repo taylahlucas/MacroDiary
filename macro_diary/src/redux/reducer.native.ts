@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 import mainReducer from './MainState.native';
-import diaryReducer from '../components/custom/DiaryContent/DiaryContentState.native';
+import diaryReducer from '@components/custom/DiaryContent/DiaryContentState.native';
 
 export const reducers = {
   main: mainReducer,
