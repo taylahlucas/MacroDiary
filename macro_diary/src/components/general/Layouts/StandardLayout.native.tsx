@@ -1,6 +1,6 @@
 import React from 'react';
 import { StandardLayoutContainer } from './StandardLayoutStyledComponents.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
 import { Image } from 'react-native';
 
 interface StandardLayoutProps {

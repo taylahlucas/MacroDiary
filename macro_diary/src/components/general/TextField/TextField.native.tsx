@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { TextInput } from 'react-native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
 import { TextInputContainer } from './TextFieldStyledComponents.native';
 
 interface TextFieldProps {
