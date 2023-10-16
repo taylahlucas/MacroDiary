@@ -1,5 +1,5 @@
 import { Pressable } from 'react-native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
 import StyledText from '../Text/StyledText.native';
 import listStyles from './ListStyles.native';
 

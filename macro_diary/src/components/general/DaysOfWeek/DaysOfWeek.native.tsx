@@ -1,9 +1,9 @@
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import { daysOfWeek } from '../../../utils/Constants.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import { daysOfWeek } from '@utils/Constants.native';
 import StyledText from "../Text/StyledText.native";
 import { DaysOfWeekContainer, DaysOfWeekItem } from './DaysOfWeekStyledComponents.native';
 import moment from 'moment';
-import { SelectedDayType } from '../../custom/DiaryContent/DiaryContentState.native';
+import { SelectedDayType } from '@components/custom/DiaryContent/DiaryContentState.native';
 
 interface DaysOfWeekProps {
   selectedDay: SelectedDayType;

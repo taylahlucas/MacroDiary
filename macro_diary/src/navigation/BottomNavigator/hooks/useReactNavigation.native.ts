@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { useNavigation, useNavigationState } from '@react-navigation/native';
 import { ParamListBase } from '@react-navigation/routers';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack/src/types';
-import { NativeNavigation } from '../../../utils/CustomTypes.native';
-import { ScreenEnum } from '../../../utils/CustomEnums.native';
+import { NativeNavigation } from '@utils/CustomTypes.native';
+import { ScreenEnum } from '@utils/CustomEnums.native';
 
 export const useReactNavigation = (): NativeNavigation => {
   const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
