@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import useGetWeekDatesForPeriod from '../../../general/WeekSelection/hooks/useGetWeekDatesForPeriod.native';
-import useGetWeekPeriod from '../../../general/WeekSelection/hooks/useGetWeekPeriod.native';
+import useGetWeekDatesForPeriod from '@components/general/WeekSelection/hooks/useGetWeekDatesForPeriod.native';
+import useGetWeekPeriod from '@components/general/WeekSelection/hooks/useGetWeekPeriod.native';
 import useDiaryContentDispatch from './useDiaryContentDispatch.native';
 import useDiaryContentState from './useDiaryContentState.native';
 

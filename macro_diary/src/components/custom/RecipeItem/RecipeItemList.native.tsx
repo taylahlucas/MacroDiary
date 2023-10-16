@@ -1,11 +1,11 @@
 import { View } from 'react-native';
 import moment from 'moment';
-import { RecipeCategoryEnum } from '../../../utils/CustomEnums.native';
-import StyledText from '../../general/Text/StyledText.native';
+import { RecipeCategoryEnum } from '@utils/CustomEnums.native';
+import StyledText from '@components/general/Text/StyledText.native';
 import RecipeItemListItem from './RecipeItemListItem.native';
-import Spacing from '../../general/Spacing.native';
-import { recipeDataMock } from '../../../mock/mockData.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import Spacing from '@components/general/Spacing.native';
+import { recipeDataMock } from '@mock/mockData.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
 import useDiaryContentState from '../DiaryContent/hooks/useDiaryContentState.native';
 
 const RecipeItemList = () => {

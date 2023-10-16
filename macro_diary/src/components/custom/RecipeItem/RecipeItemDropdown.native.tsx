@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import { ProductDataType } from '../../../utils/CustomTypes.native';
-import Condition from "../../general/Condition.native";
-import ScrollableList from '../../general/List/ScrollableList.native';
-import Spacing from '../../general/Spacing.native';
-import StyledText from '../../general/Text/StyledText.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import { ProductDataType } from '@utils/CustomTypes.native';
+import Condition from "@components/general/Condition.native";
+import ScrollableList from '@components/general/List/ScrollableList.native';
+import Spacing from '@components/general/Spacing.native';
+import StyledText from '@components/general/Text/StyledText.native';
 import { styles } from '../ScannedItem/ScannedItemStyles.native';
 
 interface RecipeItemProps {

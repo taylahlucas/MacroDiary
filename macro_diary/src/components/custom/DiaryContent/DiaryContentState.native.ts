@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { DaysOfWeekEnum } from "../../../utils/CustomEnums.native";
+import { DaysOfWeekEnum } from "@utils/CustomEnums.native";
 
 export interface SelectedDayType {
   day: DaysOfWeekEnum;
