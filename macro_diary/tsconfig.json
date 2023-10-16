@@ -1,6 +1,18 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
-    "moduleSuffixes": [".android", ".ios", ""]
+    "moduleSuffixes": [".android", ".ios", ""],
+    "baseUrl": "./",
+    "paths": {
+      "react": ["./node_modules/@types/react"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@mock/*": ["src/mock/*"],
+      "@navigation/*": ["html/config/react/navigation/*"],
+      "@redux/*": ["src/redux/*"],
+      "@screens/*": ["src/screens/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"],
+    }
   }
 }
