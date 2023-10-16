@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { StoreState } from  '../../../../utils/CustomInterfaces.native';
+import { StoreState } from  '@utils/CustomInterfaces.native';
 import { DiaryContentState } from '../DiaryContentState.native';
 
 const useDiaryContentState = (): DiaryContentState => {

@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { useAppDispatch } from '../../../../redux/store.native';
+import { useAppDispatch } from '@redux/store.native';
 import { 
   setSelectedDiaryWeek, 
   setSelectedDiaryDates, 

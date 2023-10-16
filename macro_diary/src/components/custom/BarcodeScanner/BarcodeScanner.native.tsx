@@ -1,11 +1,10 @@
 import { View } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { styles } from './BarcodeScannerStyles.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
 import BarcodeScannerOverlay from './BarcodeScannerOverlay.native';
-import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
+import useMainDispatch from '@redux/hooks/useMainDispatch.native';
 import useHandleBarcodeScanned from './hooks/useHandleBarcodeScanned.native';
-import ExitButton from '../../general/Buttons/ExitButton.native';
+import ExitButton from '@components/general/Buttons/ExitButton.native';
 import { BarcodeScannerExitButton } from './BarcodeScannerStyledComponents.native';
 
 const BarcodeScanner = () => {

@@ -1,13 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
-import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import Button from '../../general/Buttons/Button.native';
-import CustomSearchBarWithBarcode from '../../general/CustomSearchBar/CustomSearchBarWithBarcode.native';
-import Spacing from '../../general/Spacing.native';
+import useMainDispatch from '@redux/hooks/useMainDispatch.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import Button from '@components/general/Buttons/Button.native';
+import CustomSearchBarWithBarcode from '@components/general/CustomSearchBar/CustomSearchBarWithBarcode.native';
+import Spacing from '@components/general/Spacing.native';
 import { AddRecipeContainer, AddRecipeContentContainer } from './AddRecipeContentStyledComponents.native';
-import TextField from '../../general/TextField/TextField.native';
-import StyledText from '../../general/Text/StyledText.native';
+import TextField from '@components/general/TextField/TextField.native';
+import StyledText from '@components/general/Text/StyledText.native';
 
 const AddRecipeContent = () => {
   const theme = useGetTheme();

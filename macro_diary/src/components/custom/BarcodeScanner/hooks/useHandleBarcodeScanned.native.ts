@@ -1,8 +1,8 @@
 import { Alert } from 'react-native';
 import axios from 'axios';
-import useMainDispatch from '../../../../redux/hooks/useMainDispatch.native';
-import useMainState from '../../../../redux/hooks/useMainState.native';
-import { ProductDataType } from '../../../../utils/CustomTypes.native';
+import useMainDispatch from '@redux/hooks/useMainDispatch.native';
+import useMainState from '@redux/hooks/useMainState.native';
+import { ProductDataType } from '@utils/CustomTypes.native';
 
 interface BarCodeScannedParams {
   type: string;
