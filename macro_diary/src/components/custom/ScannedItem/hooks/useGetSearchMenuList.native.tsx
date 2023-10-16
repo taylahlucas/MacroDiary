@@ -1,5 +1,5 @@
-import { ScannedMenuListType } from '../../../../utils/CustomTypes.native';
-import { SearchMenuListEnum } from '../../../../utils/CustomEnums.native';
+import { ScannedMenuListType } from '@utils/CustomTypes.native';
+import { SearchMenuListEnum } from '@utils/CustomEnums.native';
 
 const useGetSearchMenuList = (): ScannedMenuListType[] => {
   return [

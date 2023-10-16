@@ -1,4 +1,4 @@
-import ScrollableList from '../../general/List/ScrollableList.native';
+import ScrollableList from '@components/general/List/ScrollableList.native';
 import useGetSearchMenuList from './hooks/useGetSearchMenuList.native';
 import ScannedItemMenuItem from './ScannedItemMenuItem.native';
 

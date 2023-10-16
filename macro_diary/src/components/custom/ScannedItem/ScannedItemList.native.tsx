@@ -1,7 +1,7 @@
-import ScrollableList from '../../general/List/ScrollableList.native';
+import ScrollableList from '@components/general/List/ScrollableList.native';
 import ScannedItemListItem from './ScannedItemListItem.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import useMainState from '../../../redux/hooks/useMainState.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import useMainState from '@redux/hooks/useMainState.native';
 import { styles } from './ScannedItemStyles.native';
 
 const ScannedItemList = () => {

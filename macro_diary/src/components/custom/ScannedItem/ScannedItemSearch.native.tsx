@@ -1,10 +1,9 @@
 import { View } from 'react-native';
-import Dropdown from '../../general/Dropdown/Dropdown.native';
+import Dropdown from '@components/general/Dropdown/Dropdown.native';
 import ScannedItemList from './ScannedItemList.native';
 import ScannedItemMenuList from './ScannedItemMenuList.native';
-import CustomSearchBarWithBarcode from '../../general/CustomSearchBar/CustomSearchBarWithBarcode.native';
-import { styles } from './ScannedItemStyles.native';
-import Spacing from '../../general/Spacing.native';
+import CustomSearchBarWithBarcode from '@components/general/CustomSearchBar/CustomSearchBarWithBarcode.native';
+import Spacing from '@components/general/Spacing.native';
 
 const ScannedItemSearch = () => {
   return (

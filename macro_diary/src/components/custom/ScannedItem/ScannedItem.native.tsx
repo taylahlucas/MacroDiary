@@ -1,14 +1,14 @@
 import { View } from 'react-native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import { MacroType } from '../../../utils/CustomTypes.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import { MacroType } from '@utils/CustomTypes.native';
 import ScannedItemContent from './ScannedItemContent.native';
-import Spacing from '../../general/Spacing.native';
+import Spacing from '@components/general/Spacing.native';
 import { styles } from './ScannedItemStyles.native';
-import CustomPieChart from '../../general/Charts/CustomPieChart.native';
+import CustomPieChart from '@components/general/Charts/CustomPieChart.native';
 import { useGetChartData } from './hooks/useGetChartData.native';
-import Condition from '../../general/Condition.native';
-import StyledText from '../../general/Text/StyledText.native';
-import ScrollableList from '../../general/List/ScrollableList.native';
+import Condition from '@components/general/Condition.native';
+import StyledText from '@components/general/Text/StyledText.native';
+import ScrollableList from '@components/general/List/ScrollableList.native';
 
 interface ScannedItemProps {
   macros: MacroType;

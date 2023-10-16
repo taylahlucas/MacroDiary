@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import useMainDispatch from '../../../../redux/hooks/useMainDispatch.native';
-import useMainState from '../../../../redux/hooks/useMainState.native';
+import useMainDispatch from '@redux/hooks/useMainDispatch.native';
+import useMainState from '@redux/hooks/useMainState.native';
 
 
 const useSetFilteredProductData = () => {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import StyledText from '../../../components/general/Text/StyledText.native';
+import StyledText from '@components/general/Text/StyledText.native';
 
 interface ScannedItemListTitleProps {
   textColor?: string;

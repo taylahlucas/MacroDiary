@@ -1,8 +1,8 @@
 import { Pressable } from 'react-native';
 import { ScannedItemListTitle } from './ScannedItemStyledComponents.native';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
-import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
-import useMainState from '../../../redux/hooks/useMainState.native';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
+import useMainDispatch from '@redux/hooks/useMainDispatch.native';
+import useMainState from '@redux/hooks/useMainState.native';
 
 interface ScannedItemMenuItemProps {
   index: number;

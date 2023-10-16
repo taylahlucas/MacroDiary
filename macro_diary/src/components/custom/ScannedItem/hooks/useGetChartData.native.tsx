@@ -1,6 +1,6 @@
-import { MacroType } from '../../../../utils/CustomTypes.native';
-import { MacroEnum } from '../../../../utils/CustomEnums.native';
-import { ChartDataProps } from '../../../../utils/CustomTypes.native';
+import { MacroType } from '@utils/CustomTypes.native';
+import { MacroEnum } from '@utils/CustomEnums.native';
+import { ChartDataProps } from '@utils/CustomTypes.native';
 
 const colors: string[] = [
   "#7A56D0",

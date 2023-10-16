@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import { styles } from './ScannedItemStyles.native';
-import StyledText from '../../general/Text/StyledText.native';
+import StyledText from '@components/general/Text/StyledText.native';
 
 interface ScannedItemContentProps {
   name: string;
