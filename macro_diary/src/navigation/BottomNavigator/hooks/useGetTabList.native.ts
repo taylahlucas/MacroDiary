@@ -1,8 +1,9 @@
-import AddRecipeModal from "@screens/AddRecipeModal.native";
-import Diary from "@screens/Diary.native";
-import Search from "@screens/Search.native";
-import { IconTypeEnum, TabEnum } from "@utils/CustomEnums.native";
-import { TabItemType } from '@utils/CustomTypes.native';
+import AddRecipeModal from "../../../screens/AddRecipeModal.native";
+import Diary from "../../../screens/Diary.native";
+import Search from "../../../screens/Search.native";
+import { IconTypeEnum, TabEnum } from "../../../utils/CustomEnums.native";
+import { TabItemType } from '../../../utils/CustomTypes.native';
+import BottomStackNavigator from '../BottomStackNavigator.native';
 
 const useGetTabList = (): TabItemType[] => {
   return [

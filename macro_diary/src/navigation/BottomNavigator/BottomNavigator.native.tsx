@@ -1,5 +1,5 @@
 import { createBottomTabNavigator, BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { ScreenEnum } from '@utils/CustomEnums.native';
+import { ScreenEnum, TabEnum } from '../../utils/CustomEnums.native';
 import useDefaultHeaderOptions from './hooks/useDefaultHeaderOptions.native';
 import BottomTabNavigatorTabBar from './BottomTabNavigatorTabBar.native';
 import useGetTabList from './hooks/useGetTabList.native';

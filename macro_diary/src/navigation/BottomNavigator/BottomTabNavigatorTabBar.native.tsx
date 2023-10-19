@@ -1,12 +1,12 @@
 import React from 'react';
 import { Pressable } from 'react-native';
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import useGetTheme from '@styles/hooks/useGetTheme.native';
-import Icon from '@components/general/Icon/Icon.native';
-import { TabEnum } from '@utils/CustomEnums.native';
-import Condition from '@components/general/Condition.native';
+import useGetTheme from '../../styles/hooks/useGetTheme.native';
+import Icon from '../../components/general/Icon/Icon.native';
+import { TabEnum } from '../../utils/CustomEnums.native';
+import Condition from '../../components/general/Condition.native';
 import { TabNavigatorContainer, BottomTabNavigatorIconBackground } from './BottomTabNavigatorStyledComponents.native'; 
-import useMainDispatch from '@redux/hooks/useMainDispatch.native';
+import useMainDispatch from '../../redux/hooks/useMainDispatch.native';
 
 const BottomTabNavigatorTabBar = ({ state, descriptors, navigation }: BottomTabBarProps): JSX.Element => {
   const theme = useGetTheme();

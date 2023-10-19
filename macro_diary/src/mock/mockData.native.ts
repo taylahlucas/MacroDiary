@@ -1,5 +1,5 @@
 import moment from "moment";
-import { RecipeCategoryEnum } from "@utils/CustomEnums.native";
+import { RecipeCategoryEnum } from "../utils/CustomEnums.native";
 import { ProductDataType, RecipeDataType } from "../utils/CustomTypes.native";
 
 export const productDataMock: ProductDataType[] = [

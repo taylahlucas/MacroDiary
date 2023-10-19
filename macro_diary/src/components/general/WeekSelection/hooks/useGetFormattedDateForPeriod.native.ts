@@ -1,5 +1,5 @@
 import moment from "moment";
-import { months } from "@utils/Constants.native";
+import { months } from "../../../../utils/Constants.native";
 
 const useGetFormattedDateForPeriod = () => {
   const getFormattedDateForPeriod = (date: string): string => {

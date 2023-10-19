@@ -1,6 +1,6 @@
 import { PieChart } from 'react-native-gifted-charts';
-import useGetTheme from '@styles/hooks/useGetTheme.native';
-import { ChartDataProps } from '@utils/CustomTypes.native';
+import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import { ChartDataProps } from '../../../utils/CustomTypes.native';
 
 interface CustomPieChartProps {
   isDonut?: boolean;

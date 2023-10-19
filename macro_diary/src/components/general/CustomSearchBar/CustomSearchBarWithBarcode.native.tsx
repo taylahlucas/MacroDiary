@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import CustomSearchBar from './CustomSearchBar.native';
-import BarcodeScannerButton from '@components/custom/BarcodeScanner/BarcodeScannerButton.native';
+import BarcodeScannerButton from '../../custom/BarcodeScanner/BarcodeScannerButton.native';
 import { styles } from './CustomSearchBarStyles.native';
 
 const CustomSearchBarWithBarcode = () => {
