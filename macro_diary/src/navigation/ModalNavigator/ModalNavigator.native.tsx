@@ -1,6 +1,6 @@
-import Condition from '../../components/general/Condition.native';
-import useMainState from '../../redux/hooks/useMainState.native';
-import AddRecipeModal from '../../screens/AddRecipeModal.native';
+import Condition from '@components/general/Condition.native';
+import useMainState from '@redux/hooks/useMainState.native';
+import AddRecipeModal from '@screens/AddRecipeModal.native';
 
 const ModalNavigator = () => {
   const { showAddRecipeModal } = useMainState();

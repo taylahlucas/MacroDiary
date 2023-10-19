@@ -1,4 +1,4 @@
-import { darkTheme } from "../colors.native";
+import { darkTheme } from '../colors.native';
 
 const useGetTheme = () => {
   // TODO: Uncomment when light theme is added

@@ -1,5 +1,5 @@
-import CustomButton from "./CustomButton.native";
-import ExitButton from "./ExitButton.native";
+import CustomButton from './CustomButton.native';
+import ExitButton from './ExitButton.native';
 
 type ButtonType = 'Custom' | 'Exit' | 'Icon';
 

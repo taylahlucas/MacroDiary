@@ -1,6 +1,6 @@
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
-import { IconTypeEnum } from '../../../utils/CustomEnums.native';
+import { IconTypeEnum } from '@utils/CustomEnums.native';
 
 interface IconProps {
   name: string;

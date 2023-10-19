@@ -1,5 +1,5 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AddRecipeModal from "@screens/AddRecipeModal.native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AddRecipeModal from '@screens/AddRecipeModal.native';
 
 const Stack = createNativeStackNavigator();
 

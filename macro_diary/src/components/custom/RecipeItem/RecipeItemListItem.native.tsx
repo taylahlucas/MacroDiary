@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ProductDataType } from "@utils/CustomTypes.native";
-import Dropdown from "@components/general/Dropdown/Dropdown.native";
+import Dropdown from '@components/general/Dropdown/Dropdown.native';
 import SelectableListItem from '@components/general/List/SelectableListItem.native';
 import RecipeItemDropdown from './RecipeItemDropdown.native';
 

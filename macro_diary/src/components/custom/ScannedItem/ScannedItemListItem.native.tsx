@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { MacroType } from "@utils/CustomTypes.native";
-import Dropdown from "@components/general/Dropdown/Dropdown.native";
+import { MacroType } from '@utils/CustomTypes.native';
+import Dropdown from '@components/general/Dropdown/Dropdown.native';
 import SelectableListItem from '@components/general/List/SelectableListItem.native';
 import ScannedItem from './ScannedItem.native';
 

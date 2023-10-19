@@ -1,6 +1,6 @@
-import { useEffect } from "react";
-import moment from "moment";
-import useDiaryContentDispatch from "./useDiaryContentDispatch.native";
+import { useEffect } from 'react';
+import moment from 'moment';
+import useDiaryContentDispatch from './useDiaryContentDispatch.native';
 import useGetWeekPeriod from '@components/general/WeekSelection/hooks/useGetWeekPeriod.native';
 import { daysOfWeek } from "@utils/Constants.native";
 
