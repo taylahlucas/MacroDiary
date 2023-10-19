@@ -1,7 +1,7 @@
 import { Text } from 'react-native';
-import { FontType, AlignmentType } from '../../../styles/Font/FontType';
-import defaultStyle from '../../../styles/Font/FontStyle';
-import useGetTheme from '../../../styles/hooks/useGetTheme.native';
+import { FontType, AlignmentType } from '@styles/Font/FontType';
+import defaultStyle from '@styles/Font/FontStyle';
+import useGetTheme from '@styles/hooks/useGetTheme.native';
 
 interface StyledTextProps {
   children: string;
