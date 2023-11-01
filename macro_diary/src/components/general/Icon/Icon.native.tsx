@@ -1,9 +1,10 @@
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 import { IconTypeEnum } from '@utils/CustomEnums.native';
+import { IconType } from '@utils/CustomTypes.native';
 
 interface IconProps {
-  name: string;
+  name: IconType;
   type?: IconTypeEnum;
   color?: string;
   size?: number;

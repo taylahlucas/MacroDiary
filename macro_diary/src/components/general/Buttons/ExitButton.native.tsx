@@ -7,7 +7,7 @@ const ExitButton = ({ onPress }: ButtonProps) => {
   const theme = useGetTheme();
   {/* TODO: Change to icon button */}
   return (
-    <ExitButtonContainer backgroundColor={theme.midGrey} onPress={onPress}>
+    <ExitButtonContainer color={theme.midGrey} onPress={onPress}>
       <StyledText color={theme.darkGrey}>x</StyledText>
      </ExitButtonContainer>
   );

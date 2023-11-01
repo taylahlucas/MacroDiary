@@ -17,7 +17,7 @@ const StandardLayout = ({ children }: StandardLayoutProps) => {
         style={{ flex: 1, resizeMode: 'cover', width: '100%', height: '100%', zIndex: -1 }}
       />
       {/* TODO: Decide on whether to use background or not backgroundColor={theme.darkGrey} */}
-      <StandardLayoutContainer backgroundColor={theme.black}>
+      <StandardLayoutContainer color={theme.black}>
       {children}
     </StandardLayoutContainer>
     </>

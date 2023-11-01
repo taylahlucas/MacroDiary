@@ -30,7 +30,7 @@ const DaysOfWeek = ({ selectedDay, setSelectedDay, weekRange }: DaysOfWeekProps)
         return (
           <DaysOfWeekItem
             key={day} 
-            backgroundColor={backgroundColor}
+            color={backgroundColor}
             disabled={!isSelectable}
             onPress={(): void => setSelectedDay({
               day: day,

@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
 
 interface StandardLayoutContainerProps {
-  backgroundColor: string;
+  color: string;
 }
 
 //<StandardLayoutContainerProps>
-//  background-color: ${props => props.backgroundColor};
+//  background-color: ${props => props.color};
 export const StandardLayoutContainer = styled.SafeAreaView`
   width: 100%;
   height: 100%;

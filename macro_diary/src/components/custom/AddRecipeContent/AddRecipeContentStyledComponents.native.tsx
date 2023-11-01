@@ -3,12 +3,12 @@ import styled from 'styled-components/native';
 import { DEFAULT_BORDER_RADIUS } from '@utils/Constants.native';
 
 interface AddRecipeContentContainerProps {
-  backgroundColor: string;
+  color: string;
 }
 
 export const AddRecipeContainer= styled.View<AddRecipeContentContainerProps>`
   height: 70%; 
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.color};
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
   margin-left: 16px;
   margin-right: 16px;
@@ -20,11 +20,32 @@ export const AddRecipeContentContainer = styled.View`
   height: 100%;
 `;
 
-export const AddRecipeContentServingSizeContainer = styled(ScrollableList)`
-  width: 30px;
-  height: 30px;
+export const AddRecipeContentServiceSizeDropdown = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const AddRecipeContentServingSizeDropdownContainer = styled.View<AddRecipeContentContainerProps>`
+  width: 45px;
+  height: 35px;
+  background-color: ${props => props.color};
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  top: -10px;
+  padding-left: 4px;
+  border-radius: ${DEFAULT_BORDER_RADIUS}px;
+`;
+
+export const AddRecipeContentServingSizeContainer = styled(ScrollableList)<AddRecipeContentContainerProps>`
+  width: 45px;
+  height: 100px;
+  background-color: ${props => props.color};
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
   position: absolute;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 32px;
+  padding-top: 8px;
+  margin-bottom: 8px;
+  z-index: -1;
 `;

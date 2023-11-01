@@ -3,12 +3,12 @@ import styled from 'styled-components/native';
 import { DEFAULT_BORDER_RADIUS } from '@utils/Constants.native';
 
 interface TabNavigatorContainerProps {
-  backgroundColor: string;
+  color: string;
 };
 
 export const TabNavigatorContainer = styled(SafeAreaView)<TabNavigatorContainerProps>`
   height: 100px;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.color};
   flex-direction: row;
   justify-content: space-evenly;
 `;
@@ -20,5 +20,5 @@ export const BottomTabNavigatorIconBackground = styled.View<TabNavigatorContaine
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
   position: absolute;
   align-self: center;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.color};
 `;

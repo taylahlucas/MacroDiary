@@ -32,8 +32,10 @@ export type IoniconType =
   | 'arrow-back'
   | 'arrow-forward'
   | 'pie-chart'
-  | 'settings-outline';
+  | 'settings-outline'
+  | 'chevron-down-outline';
 
+export type IconType = MaterialIconsType | IoniconType;
 
 export interface ProductDataType {
   barcode: string;

@@ -8,13 +8,13 @@ export const DaysOfWeekContainer = styled.View`
 `;
 
 interface DaysOfWeekItemProps {
-  backgroundColor: string;
+  color: string;
 }
 
 export const DaysOfWeekItem = styled.Pressable<DaysOfWeekItemProps>`
   height: 40px;
   width: 40px;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.color};
   border-radius: ${DEFAULT_CIRCLE_RADIUS}px; 
   justify-content: center;
 `;

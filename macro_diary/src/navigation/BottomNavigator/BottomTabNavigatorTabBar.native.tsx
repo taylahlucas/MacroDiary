@@ -14,7 +14,7 @@ const BottomTabNavigatorTabBar = ({ state, descriptors, navigation }: BottomTabB
   
   // TODO: Purple when selected && move to StyledComponents -- fix bgcolor
   return (
-    <TabNavigatorContainer backgroundColor={theme.darkGrey}>
+    <TabNavigatorContainer color={theme.darkGrey}>
       {state.routes.map((route: any, index: number) => {
         return (
           <Pressable
@@ -41,7 +41,7 @@ const BottomTabNavigatorTabBar = ({ state, descriptors, navigation }: BottomTabB
                     color={theme.primaryPurple}
                     size={55}
                   />
-                  <BottomTabNavigatorIconBackground backgroundColor={theme.lightestGrey} />
+                  <BottomTabNavigatorIconBackground color={theme.lightestGrey} />
                 </>
               }
             >

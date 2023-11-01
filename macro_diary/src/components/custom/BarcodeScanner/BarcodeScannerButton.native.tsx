@@ -12,7 +12,7 @@ const BarcodeScannerButton = () => {
   
   return (
     <BarcodeScannerButtonContainer
-      backgroundColor={theme.primaryPurple}
+      color={theme.primaryPurple}
       onPress={(): void => setShowCamera(!showCamera) }
     >
       <Icon type={IconTypeEnum.Ionicons} name={'barcode-outline'} color={'white'} size={32} />

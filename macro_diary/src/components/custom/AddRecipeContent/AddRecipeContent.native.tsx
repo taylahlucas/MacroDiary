@@ -14,7 +14,7 @@ const AddRecipeContent = () => {
   const { setShowAddRecipeModal } = useMainDispatch();
   
   return (
-    <AddRecipeContainer backgroundColor={theme.black}>
+    <AddRecipeContainer color={theme.black}>
       <AddRecipeContentContainer>
         <Spacing height={32} />
         <CustomSearchBarWithBarcode />

@@ -2,11 +2,11 @@ import styled from 'styled-components/native';
 import { DEFAULT_CIRCLE_RADIUS } from '@utils/Constants.native';
 
 interface BarcodeScannerButtonContainerProps {
-  backgroundColor: string;
+  color: string;
 };
 
 export const BarcodeScannerButtonContainer = styled.Pressable<BarcodeScannerButtonContainerProps>`
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => props.color};
   height: 48px;
   width: 48px;
   border-radius: ${DEFAULT_CIRCLE_RADIUS}px;
