@@ -3,6 +3,7 @@ import ScannedItemListItem from './ScannedItemListItem.native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
 import useMainState from '@redux/hooks/useMainState.native';
 import { styles } from './ScannedItemStyles.native';
+import React from 'react';
 
 const ScannedItemList = () => {
   const theme = useGetTheme();
@@ -11,7 +12,13 @@ const ScannedItemList = () => {
   return (
     <ScrollableList style={styles.scrollContainer}>
       {filteredProductData.map((item, index) => 
-        <ScannedItemListItem key={index} title={item.title} macros={item.macros} color={theme.darkGrey} />)}
+        <ScannedItemListItem 
+          key={index} 
+          title={item.title} 
+          macros={item.macros}
+          color={theme.darkGrey} 
+        />
+      )}
     </ScrollableList>
   )
 };

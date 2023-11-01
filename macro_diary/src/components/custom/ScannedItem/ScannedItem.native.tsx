@@ -6,37 +6,33 @@ import Spacing from '@components/general/Spacing.native';
 import { styles } from './ScannedItemStyles.native';
 import CustomPieChart from '@components/general/Charts/CustomPieChart.native';
 import { useGetChartData } from './hooks/useGetChartData.native';
-import Condition from '@components/general/Condition.native';
 import StyledText from '@components/general/Text/StyledText.native';
 import ScrollableList from '@components/general/List/ScrollableList.native';
 
 interface ScannedItemProps {
   macros: MacroType;
-  isOpen: boolean;
 }
 
-const ScannedItem = ({ macros, isOpen = false }: ScannedItemProps) => {
+const ScannedItem = ({ macros }: ScannedItemProps) => {
   const theme = useGetTheme();
   const data = useGetChartData(macros);
 
   return (
-    <Condition condition={isOpen}>
-      <ScrollableList style={styles.scrollContainer}>
-        <View style={{ ...styles.container, backgroundColor: theme.darkPurple }}>
-          <Spacing height={16}/>
-          <View style={styles.chartContainer}>
-            <CustomPieChart isDonut={true} data={data} />
-          </View>
-          <View style={{ marginLeft: 16 }}>
-            <StyledText type={'ListItemSubTitleBold'} align={'right'}>per 100g</StyledText>
-            <Spacing height={16} />
-            {Object.entries(data).map((name, index) => (
-              <ScannedItemContent key={index} name={name[1].title} amount={name[1].value} />
-            ))}
-          </View>
+    <ScrollableList style={styles.scrollContainer}>
+      <View style={{ ...styles.container, backgroundColor: theme.darkPurple }}>
+        <Spacing height={16}/>
+        <View style={styles.chartContainer}>
+          <CustomPieChart isDonut={true} data={data} />
         </View>
-      </ScrollableList>
-    </Condition>
+        <View style={{ marginLeft: 16 }}>
+          <StyledText type={'ListItemSubTitleBold'} align={'right'}>per 100g</StyledText>
+          <Spacing height={16} />
+          {Object.entries(data).map((name, index) => (
+            <ScannedItemContent key={index} name={name[1].title} amount={name[1].value} />
+          ))}
+        </View>
+      </View>
+    </ScrollableList>
   );
 };
 

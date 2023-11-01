@@ -1,15 +1,21 @@
-import { View } from 'react-native';
+import React, { useState } from 'react';
+import { Pressable, View } from 'react-native';
+import Condition from '../Condition.native';
 
 interface DropdownProps {
   header: any;
-  view: any;
+  children: any;
 }
 
-const Dropdown = ({ header, view }: DropdownProps) => {
+const Dropdown = ({ header, children }: DropdownProps) => {
+  const [isOpen, setOpenItem] = useState(false);
+  
   return (
     <View style={{ minWidth: 150 }}>
-      {header}
-      {view}
+      <Pressable onPress={(): void => setOpenItem(!isOpen)}>{header}</Pressable>
+      <Condition condition={isOpen}>
+        {children}
+      </Condition>
     </View>
   );
 };

@@ -1,5 +1,6 @@
 import { SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
+import { DEFAULT_BORDER_RADIUS } from '@utils/Constants.native';
 
 interface TabNavigatorContainerProps {
   backgroundColor: string;
@@ -16,7 +17,7 @@ export const BottomTabNavigatorIconBackground = styled.View<TabNavigatorContaine
   height: 25px;
   width: 25px;
   z-index: -1;
-  border-radius: 10px;
+  border-radius: ${DEFAULT_BORDER_RADIUS}px;
   position: absolute;
   align-self: center;
   background-color: ${props => props.backgroundColor};

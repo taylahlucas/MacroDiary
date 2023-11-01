@@ -23,3 +23,6 @@ export const daysOfWeek = [
   DaysOfWeekEnum.SATURDAY,
   DaysOfWeekEnum.SUNDAY
 ];
+
+export const DEFAULT_BORDER_RADIUS = 10;
+export const DEFAULT_CIRCLE_RADIUS = 25;
