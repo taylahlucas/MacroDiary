@@ -2,13 +2,13 @@ import ScrollableList from '@components/general/List/ScrollableList.native';
 import styled from 'styled-components/native';
 import { DEFAULT_BORDER_RADIUS } from '@utils/Constants.native';
 
-interface AddRecipeContentContainerProps {
+type AddRecipeContentContainerProps = {
   color: string;
 }
 
 export const AddRecipeContainer= styled.View<AddRecipeContentContainerProps>`
   height: 70%; 
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};  
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
   margin-left: 16px;
   margin-right: 16px;

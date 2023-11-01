@@ -12,4 +12,5 @@ export const StandardLayoutContainer = styled.SafeAreaView`
   align-items: center;
   position: absolute;
   flex: 1;
+  background-color: ${props => props.color};
 `;
