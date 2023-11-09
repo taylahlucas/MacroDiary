@@ -6,7 +6,7 @@ import { BackdropView } from '@components/general/Backdrop/BackdropStyledCompone
 const AddRecipeModal = () => {  // TODO: Swipe down to close
   return (
     <Modal 
-      animationType="slide"
+      animationType="fade"
       transparent={true}
     >
       <BackdropView>

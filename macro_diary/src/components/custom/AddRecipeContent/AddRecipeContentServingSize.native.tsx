@@ -1,4 +1,3 @@
-import { View } from 'react-native';
 import StyledText from '@components/general/Text/StyledText.native';
 import Dropdown from '@components/general/Dropdown/Dropdown.native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
@@ -15,7 +14,7 @@ const AddRecipeContentServingSize = () => {
   
   return (
     <AddRecipeContentServiceSizeDropdown>
-      <StyledText type={'ListItemSubTitleBold'}>serving size</StyledText>
+      <StyledText type={'ListItemSubTitle'}>serving size</StyledText>
       <Dropdown
         header={
           <AddRecipeContentServingSizeDropdownContainer color={theme.darkGrey}>

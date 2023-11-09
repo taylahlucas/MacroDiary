@@ -1,13 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
 import useMainDispatch from '@redux/hooks/useMainDispatch.native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
 import Button from '@components/general/Buttons/Button.native';
 import CustomSearchBarWithBarcode from '@components/general/CustomSearchBar/CustomSearchBarWithBarcode.native';
 import AddRecipeContentServingSize from './AddRecipeContentServingSize.native';
 import Spacing from '@components/general/Spacing.native';
-import { AddRecipeContainer, AddRecipeContentContainer } from './AddRecipeContentStyledComponents.native';
+import { AddRecipeContainer, AddRecipeContentContainer, AddRecipeContentInnerContainer } from './AddRecipeContentStyledComponents.native';
 import TextField from '@components/general/TextField/TextField.native';
+import AddRecipeContentIngredients from './AddRecipeContentIngredients.native';
 
 const AddRecipeContent = () => {
   const theme = useGetTheme();
@@ -18,18 +18,12 @@ const AddRecipeContent = () => {
       <AddRecipeContentContainer>
         <Spacing height={32} />
         <CustomSearchBarWithBarcode />
-        <View style={{ 
-          flex: 1,
-          flexDirection: 'column', 
-          justifyContent: 'space-evenly' 
-        }}
-        >
+        <AddRecipeContentInnerContainer>
           <TextField placeholder={'recipe name'} />
-
           <AddRecipeContentServingSize />
-          
-          <Button type='Exit' onPress={(): void => setShowAddRecipeModal(false)} />
-        </View>
+          <AddRecipeContentIngredients />
+        </AddRecipeContentInnerContainer>
+        <Button type='Exit' onPress={(): void => setShowAddRecipeModal(false)} />
       </AddRecipeContentContainer>
     </AddRecipeContainer>
   );
