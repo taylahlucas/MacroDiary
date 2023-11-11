@@ -1,30 +1,42 @@
 import React from 'react';
 import useMainDispatch from '@redux/hooks/useMainDispatch.native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
-import Button from '@components/general/Buttons/Button.native';
 import CustomSearchBarWithBarcode from '@components/general/CustomSearchBar/CustomSearchBarWithBarcode.native';
-import AddRecipeContentServingSize from './AddRecipeContentServingSize.native';
+import AddRecipeServingSize from './AddRecipeServingSize.native';
 import Spacing from '@components/general/Spacing.native';
-import { AddRecipeContainer, AddRecipeContentContainer, AddRecipeContentInnerContainer } from './AddRecipeContentStyledComponents.native';
+import { 
+  AddRecipeContainer, 
+  AddRecipeContentContainer, 
+  AddRecipeInnerContainer
+} from './AddRecipeStyledComponents.native';
 import TextField from '@components/general/TextField/TextField.native';
-import AddRecipeContentIngredients from './AddRecipeContentIngredients.native';
+import AddRecipeIngredients from './AddRecipeIngredients.native';
+import AddRecipeButtons from './AddRecipeButtons.native';
+import useAddRecipeDispatch from './hooks/useAddRecipeDispatch.native';
+import useAddRecipeState from './hooks/useAddRecipeState.native';
 
 const AddRecipeContent = () => {
   const theme = useGetTheme();
-  const { setShowAddRecipeModal } = useMainDispatch();
+  const { setRecipeName } = useAddRecipeDispatch();
+  const { name } = useAddRecipeState();
+  
   
   return (
-    <AddRecipeContainer color={theme.black}>
+    <AddRecipeContainer backgroundColor={theme.black}>
       <AddRecipeContentContainer>
         <Spacing height={32} />
         <CustomSearchBarWithBarcode />
-        <AddRecipeContentInnerContainer>
-          <TextField placeholder={'recipe name'} />
-          <AddRecipeContentServingSize />
-          <AddRecipeContentIngredients />
-        </AddRecipeContentInnerContainer>
-        <Button type='Exit' onPress={(): void => setShowAddRecipeModal(false)} />
+        <AddRecipeInnerContainer>
+          <TextField 
+            placeholder={'recipe name'}
+            value={name}
+            onChangeText={(value: string) => setRecipeName(value)}
+          />
+          <AddRecipeServingSize />
+          <AddRecipeIngredients />
+        </AddRecipeInnerContainer>
       </AddRecipeContentContainer>
+      <AddRecipeButtons />
     </AddRecipeContainer>
   );
 };

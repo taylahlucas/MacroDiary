@@ -1,7 +1,7 @@
 import { Pressable, Text } from 'react-native';
 import { ButtonProps } from './Button.native';
 
-const CustomButton = ({ title, onPress, style }: ButtonProps) => {
+const TextButton = ({ title, onPress, style }: ButtonProps) => {
   return (
     <Pressable style={style} onPress={onPress}>
       <Text style={{ textAlign: 'center' }}>{title}</Text>
@@ -9,4 +9,4 @@ const CustomButton = ({ title, onPress, style }: ButtonProps) => {
   );
 };
 
-export default CustomButton;
+export default TextButton;

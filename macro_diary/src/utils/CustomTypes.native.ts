@@ -23,6 +23,7 @@ export interface RecipeDataType {
 
 export type MaterialIconsType =
   | 'add-circle'
+  | 'cancel'
   | 'diary'
   | 'format-list-bulleted'
   | 'search';

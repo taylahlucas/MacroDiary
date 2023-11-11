@@ -8,6 +8,7 @@ interface DropdownProps {
 }
 
 const Dropdown = ({ header, children }: DropdownProps) => {
+  // TODO: Move this
   const [isOpen, setOpenItem] = useState(false);
   
   return (

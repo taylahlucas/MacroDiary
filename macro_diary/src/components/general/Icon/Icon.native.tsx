@@ -3,7 +3,7 @@ import Ionicon from 'react-native-vector-icons/Ionicons';
 import { IconTypeEnum } from '@utils/CustomEnums.native';
 import { IconType } from '@utils/CustomTypes.native';
 
-interface IconProps {
+export interface IconProps {
   name: IconType;
   type?: IconTypeEnum;
   color?: string;
