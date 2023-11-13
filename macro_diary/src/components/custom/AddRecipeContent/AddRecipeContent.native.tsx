@@ -1,5 +1,4 @@
 import React from 'react';
-import useMainDispatch from '@redux/hooks/useMainDispatch.native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
 import CustomSearchBarWithBarcode from '@components/general/CustomSearchBar/CustomSearchBarWithBarcode.native';
 import AddRecipeServingSize from './AddRecipeServingSize.native';
@@ -19,13 +18,12 @@ const AddRecipeContent = () => {
   const theme = useGetTheme();
   const { setRecipeName } = useAddRecipeDispatch();
   const { name } = useAddRecipeState();
-  
-  
+
   return (
     <AddRecipeContainer backgroundColor={theme.black}>
       <AddRecipeContentContainer>
         <Spacing height={32} />
-        <CustomSearchBarWithBarcode />
+        <CustomSearchBarWithBarcode placeholder={'Search ingredients...'} />
         <AddRecipeInnerContainer>
           <TextField 
             placeholder={'recipe name'}

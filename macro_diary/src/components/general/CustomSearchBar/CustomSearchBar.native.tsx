@@ -5,7 +5,7 @@ import { styles } from './CustomSearchBarStyles.native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import useMainDispatch from '../../../redux/hooks/useMainDispatch.native';
 
-interface CustomSearchBarProps {
+export interface CustomSearchBarProps {
   placeholder?: string;
 }
 

@@ -1,4 +1,4 @@
-import { ScreenEnum, IconTypeEnum, TabEnum, SearchMenuListEnum, RecipeCategoryEnum } from "./CustomEnums.native";
+import { ScreenEnum, IconTypeEnum, TabEnum, SearchMenuListEnum, RecipeCategoryEnum, MeasurementEnum } from './CustomEnums.native';
 
 export interface TabItemType {
   id: TabEnum;
@@ -13,12 +13,43 @@ export interface ScannedMenuListType {
   title: string;
 }
 
-export interface RecipeDataType {
+export interface Product {
+  id: number;
+  barcode: string;
+  title: string;
+  macros: Macro;
+}
+
+export interface RecipeIngredient {
+  id: number;
+  ingredient: Product;
+  quantity: number;
+  quantityType: MeasurementEnum;
+}
+
+export interface RecipeData {
   id: number;
   title: string;
   category: RecipeCategoryEnum;
-  ingredients: ProductDataType[];
+  ingredients: Product[];
   dateAdded: string;
+}
+
+export interface Macro {
+  calories: number;
+  carbohydrates: number;
+  fat: number;
+  protein: number;
+  salt: number;
+  saturatedFat: number;
+  sodium: number;
+  sugar: number;
+}
+
+export interface ChartDataProps {
+  title: string;
+  value: number;
+  color: string;
 }
 
 export type MaterialIconsType =
@@ -32,40 +63,12 @@ export type MaterialIconsType =
 export type IoniconType =
   | 'arrow-back'
   | 'arrow-forward'
+  | 'checkmark-circle'
   | 'pie-chart'
   | 'settings-outline'
   | 'chevron-down-outline';
 
 export type IconType = MaterialIconsType | IoniconType;
-
-export interface ProductDataType {
-  barcode: string;
-  title: string;
-  macros: MacroType;
-}
-
-export interface MacroType {
-  calories: number;
-  carbohydrates: number;
-  fat: number;
-  protein: number;
-  salt: number;
-  saturatedFat: number;
-  sodium: number;
-  sugar: number;
-}
-
-export interface Product {
-  barcode: number;
-  item: string;
-  macros: MacroType;
-}
-
-export interface ChartDataProps {
-  title: string;
-  value: number;
-  color: string;
-}
 
 export interface NativeNavigation {
   navigate: (page: ScreenEnum, params?: any) => void;

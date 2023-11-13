@@ -65,7 +65,6 @@ export const AddRecipeServingSizeDropdownContainer = styled.View<AddRecipeContai
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding-left: 4px;
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
 `;
 
@@ -93,6 +92,13 @@ export const AddRecipeIngredientsContainer = styled.View<AddRecipeContainerProps
   z-index: -1;
 `;
 
+export const AddRecipeIngredientItemContainer = styled.View`
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-vertical: 6px;
+`;
+
 export const AddRecipeIngredientsInnerContainer = styled.View<AddRecipeContainerProps>`
   background-color: ${(props) => props.backgroundColor};  
   border-radius: ${DEFAULT_BORDER_RADIUS}px;
@@ -104,8 +110,7 @@ export const AddRecipeIngredientTitle = styled(StyledText)`
 `;
 
 export const AddRecipeIngredientItem = styled(StyledText)`
-  width: 100%;
-  padding: 8px;
+  width: 60%;
 `;
 
 export const AddRecipeSubmitButtonBgContainer = styled.View`
@@ -116,8 +121,8 @@ export const AddRecipeSubmitButtonBgContainer = styled.View`
 `;
 
 export const AddRecipeSubmitButtonBg = styled.View<AddRecipeContainerProps>`
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   z-index: -1;
   border-radius: 25px;
   position: absolute;

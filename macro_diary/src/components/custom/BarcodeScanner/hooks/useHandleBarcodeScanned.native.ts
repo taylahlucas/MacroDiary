@@ -2,7 +2,7 @@ import { Alert } from 'react-native';
 import axios from 'axios';
 import useMainDispatch from '@redux/hooks/useMainDispatch.native';
 import useMainState from '@redux/hooks/useMainState.native';
-import { ProductDataType } from '@utils/CustomTypes.native';
+import { Product } from '@utils/CustomTypes.native';
 
 interface BarCodeScannedParams {
   type: string;
@@ -29,7 +29,9 @@ const useHandleBarcodeScanned = () => {
       .then(async (response) => {
         const nutrientData = await response.data['product']['nutriments'];
         if (!!nutrientData) {
-          const mappedData: ProductDataType = {
+          const mappedData: Product = {
+            // TODO: Test id
+            id: response.data['id'],
             barcode: data,
             title: response.data['product']['product_name'],
             macros: {

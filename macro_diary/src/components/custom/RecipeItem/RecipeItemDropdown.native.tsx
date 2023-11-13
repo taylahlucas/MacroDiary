@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import useGetTheme from '@styles/hooks/useGetTheme.native';
-import { ProductDataType } from '@utils/CustomTypes.native';
+import { Product } from '@utils/CustomTypes.native';
 import ScrollableList from '@components/general/List/ScrollableList.native';
 import Spacing from '@components/general/Spacing.native';
 import StyledText from '@components/general/Text/StyledText.native';
@@ -9,7 +9,7 @@ import { styles } from '../ScannedItem/ScannedItemStyles.native';
 
 interface RecipeItemProps {
   title: string;
-  ingredients: ProductDataType[];
+  ingredients: Product[];
 }
 
 const RecipeItem = ({ title, ingredients }: RecipeItemProps) => {

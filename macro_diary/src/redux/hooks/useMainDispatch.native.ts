@@ -1,5 +1,5 @@
 import { Dispatch } from 'redux';
-import { ProductDataType } from '@utils/CustomTypes.native';
+import { Product } from '@utils/CustomTypes.native';
 import { 
   setHasBarcodeScannerPermission,
   setShowCamera,
@@ -18,8 +18,8 @@ interface MainDispatch {
   setShowAddRecipeModal: (value: boolean) => void;
   setSearchValue: (value: string) => void;
   setBarcodes: (value: string[]) => void;
-  setProductData: (value: ProductDataType[]) => void;
-  setFilteredProductData: (value: ProductDataType[]) => void;
+  setProductData: (value: Product[]) => void;
+  setFilteredProductData: (value: Product[]) => void;
   setSelectedSearchTableIndex: (value: number) => void;
 }
 
@@ -42,10 +42,10 @@ const useMainDispatch = (): MainDispatch => {
     setBarcodes(value: string[]): void {
       dispatch(setBarcodes(value));
     },
-    setProductData(value: ProductDataType[]): void {
+    setProductData(value: Product[]): void {
       dispatch(setProductData(value));
     },
-    setFilteredProductData(value: ProductDataType[]): void {
+    setFilteredProductData(value: Product[]): void {
       dispatch(setFilteredProductData(value));
     },
     setSelectedSearchTableIndex(value: number): void {

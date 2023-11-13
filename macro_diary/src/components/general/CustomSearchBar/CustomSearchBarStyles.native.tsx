@@ -9,8 +9,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   searchContainerWithBarcode: {
-    marginRight: 8,
-    marginLeft: 8,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-evenly',

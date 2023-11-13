@@ -24,8 +24,18 @@ const AddRecipeServingSize = () => {
         setOpen={triggerServingSizeDropdown}
         header={
           <AddRecipeServingSizeDropdownContainer backgroundColor={theme.black}>
-            <StyledText color={theme.lightGrey} type={'ListItemSubTitle'}>{servingSize.toString()}</StyledText>
-            <Icon type={IconTypeEnum.Ionicons} name={'chevron-down-outline'} size={20} color={theme.midGrey} />
+            <StyledText
+              color={theme.lightGrey} 
+              type={'ListItemSubTitle'}
+            >
+                {servingSize.toString()}
+            </StyledText>
+            <Icon
+              type={IconTypeEnum.Ionicons} 
+              name={'chevron-down-outline'} 
+              size={20} 
+              color={theme.midGrey}
+            />
           </AddRecipeServingSizeDropdownContainer>
         }
       >

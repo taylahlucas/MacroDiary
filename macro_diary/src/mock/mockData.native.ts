@@ -1,9 +1,10 @@
 import moment from 'moment';
 import { RecipeCategoryEnum } from '@utils/CustomEnums.native';
-import { ProductDataType, RecipeDataType } from '@utils/CustomTypes.native';
+import { Product, RecipeData } from '@utils/CustomTypes.native';
 
-export const productDataMock: ProductDataType[] = [
+export const productDataMock: Product[] = [
   {
+    id: 0,
     barcode: '1234',
     title: 'Broccoli',
     macros: {
@@ -18,6 +19,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 1,
     barcode: '1235',
     title: 'Carrot',
     macros: {
@@ -32,6 +34,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 2,
     barcode: '1236',
     title: 'Cauliflower',
     macros: {
@@ -46,6 +49,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 3,
     barcode: '1237',
     title: 'Chicken Breast',
     macros: {
@@ -60,6 +64,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 4,
     barcode: '1238',
     title: 'Milk',
     macros: {
@@ -74,6 +79,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 5,
     barcode: '1239',
     title: 'Steak',
     macros: {
@@ -88,6 +94,7 @@ export const productDataMock: ProductDataType[] = [
     }
   },
   {
+    id: 6,
     barcode: '1240',
     title: 'Chips',
     macros: {
@@ -103,7 +110,7 @@ export const productDataMock: ProductDataType[] = [
   }
 ];
 
-export const recipeDataMock: RecipeDataType[] = [
+export const recipeDataMock: RecipeData[] = [
   {
     id: 1,
     title: 'Cottage Pie',

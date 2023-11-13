@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { productDataMock } from "@mock/mockData.native";
-import { ProductDataType } from "@utils/CustomTypes.native";
+import { Product } from "@utils/CustomTypes.native";
 
 export interface MainState {
   readonly hasBarcodeScannerPermission: boolean;
@@ -8,8 +8,8 @@ export interface MainState {
   readonly showAddRecipeModal: boolean;
   readonly searchValue: string;
   readonly barcodes: string[];
-  readonly productData: ProductDataType[];
-  readonly filteredProductData: ProductDataType[];
+  readonly productData: Product[];
+  readonly filteredProductData: Product[];
   readonly selectedSearchTableIndex: number;
 }
 

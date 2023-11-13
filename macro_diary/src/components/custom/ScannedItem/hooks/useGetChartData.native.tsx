@@ -1,4 +1,4 @@
-import { MacroType } from '@utils/CustomTypes.native';
+import { Macro } from '@utils/CustomTypes.native';
 import { MacroEnum } from '@utils/CustomEnums.native';
 import { ChartDataProps } from '@utils/CustomTypes.native';
 
@@ -12,12 +12,12 @@ const colors: string[] = [
   "#F1568F"
 ]
 
-const matchMacroToEnum = (macroType: MacroType): string[] => {
-  const keys = Object.keys(macroType) as (keyof MacroType)[];
+const matchMacroToEnum = (macro: Macro): string[] => {
+  const keys = Object.keys(macro) as (keyof Macro)[];
   return keys.map((key) => MacroEnum[key.toUpperCase() as keyof typeof MacroEnum]);
 }
 
-export function useGetChartData(macros: MacroType): ChartDataProps[] {
+export function useGetChartData(macros: Macro): ChartDataProps[] {
   const data: ChartDataProps[] = []
   const macroString = matchMacroToEnum(macros);
   

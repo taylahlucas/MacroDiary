@@ -16,19 +16,19 @@ const AddRecipeButtons = () => {
     <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
       <AddRecipeSubmitButtonBgContainer>
         <IconButton
-          name={'add-circle'}
+          name={'checkmark-circle'}
           size={50}
           color={theme.primaryPurple}
           onPress={() => null}
         />
-        <AddRecipeSubmitButtonBg backgroundColor={'white'} />
+        <AddRecipeSubmitButtonBg backgroundColor={theme.lightestGrey} />
       </AddRecipeSubmitButtonBgContainer>
 
       <AddRecipeSubmitButtonBgContainer>
         <IconButton
           name={'cancel'}
           type={IconTypeEnum.MaterialIcons}
-          size={50}
+          size={40}
           color={theme.darkGrey}
           onPress={(): void => setShowAddRecipeModal(false)} 
         />

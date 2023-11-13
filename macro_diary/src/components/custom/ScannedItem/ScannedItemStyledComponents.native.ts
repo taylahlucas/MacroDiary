@@ -10,6 +10,11 @@ export const ScannedItemListTitle = styled(StyledText)<ScannedItemListTitleProps
   color: ${props => props.color };
 `;
 
+export const ScannedSearchContainer = styled.View`
+  flex-direction: column;
+  margin-left: 8px;
+`;
+
 export const ScannedItemContainer = styled.View`
   width: 350px;
   border-radius: 10px;

@@ -51,3 +51,13 @@ export enum DaysOfWeekEnum {
   SATURDAY = "Sa",
   SUNDAY = "Su"
 }
+
+export enum MeasurementEnum {
+  TEASPOON = 'tsp',
+  TABLESPOON = 'tbsp',
+  CUP = 'cup',
+  MILLILITRE = 'ml',
+  LITRE = 'l',
+  GRAM = 'g',
+  KILOGRAM = 'kg'
+}
