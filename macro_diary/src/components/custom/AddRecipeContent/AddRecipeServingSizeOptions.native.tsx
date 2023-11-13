@@ -10,7 +10,7 @@ import useAddRecipeState from './hooks/useAddRecipeState.native';
 
 const AddRecipeServingSizeOptions = () => {
   const theme = useGetTheme();
-  const { setServingSize } = useAddRecipeDispatch();
+  const { setServingSize, triggerServingSizeDropdown } = useAddRecipeDispatch();
   const { servingSize } = useAddRecipeState();
   const servingSizes = [1, 2, 3, 4];
 
@@ -21,6 +21,7 @@ const AddRecipeServingSizeOptions = () => {
           key={index} 
           onPress={() => {
             setServingSize(size);
+            triggerServingSizeDropdown(false);
           }} 
           disabled={size === servingSize}
         >

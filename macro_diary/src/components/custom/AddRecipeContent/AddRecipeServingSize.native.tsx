@@ -9,15 +9,19 @@ import {
   AddRecipeServingSizeDropdownContainer 
 } from './AddRecipeStyledComponents.native';
 import useAddRecipeState from './hooks/useAddRecipeState.native';
+import useAddRecipeDispatch from './hooks/useAddRecipeDispatch.native';
 
 const AddRecipeServingSize = () => {
   const theme = useGetTheme();
-  const { servingSize } = useAddRecipeState();
+  const { triggerServingSizeDropdown } = useAddRecipeDispatch();
+  const { servingSize, isServingSizeDropdownOpen } = useAddRecipeState();
   
   return (
     <AddRecipeServiceSizeDropdown>
       <StyledText type={'ListItemSubTitle'}>serving size</StyledText>
       <Dropdown
+        isOpen={isServingSizeDropdownOpen}
+        setOpen={triggerServingSizeDropdown}
         header={
           <AddRecipeServingSizeDropdownContainer backgroundColor={theme.black}>
             <StyledText color={theme.lightGrey} type={'ListItemSubTitle'}>{servingSize.toString()}</StyledText>

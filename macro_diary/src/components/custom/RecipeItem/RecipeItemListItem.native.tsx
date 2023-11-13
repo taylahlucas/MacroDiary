@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ProductDataType } from "@utils/CustomTypes.native";
 import Dropdown from '@components/general/Dropdown/Dropdown.native';
 import SelectableListItem from '@components/general/List/SelectableListItem.native';
@@ -11,9 +11,12 @@ interface ScannedItemListItemProps {
 }
 
 const RecipeItemListItem = ({ title, color, ingredients }: ScannedItemListItemProps) => {
-  
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <Dropdown 
+    <Dropdown
+      isOpen={isOpen}
+      setOpen={setOpen}
       header={
         <SelectableListItem
           title={title} 
