@@ -3,10 +3,10 @@
 #### 13th October 2023
 
 An application which tracks macro and vitamin intake built using React Native &amp; Typescript.
-Features includes:
-  -- Includes barcode scanning functionality to scan products and their macros throughout the UK.
-  -- Add custom recipes to a diary to track intake.
-  -- View recently scanned items, recipes and recently added recipes.
+Features include:
+  - Includes barcode scanning functionality to scan products and their macros throughout the UK.
+  - Add custom recipes to a diary to track intake.
+  - View recently scanned items, recipes and recently added recipes.
 
   ** WORK IN PROGRESS **
 
