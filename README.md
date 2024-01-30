@@ -10,7 +10,6 @@ Features include:
 
   ** WORK IN PROGRESS **
 
-
 # Setup
 
 - cd macro-diary
@@ -21,6 +20,7 @@ Features include:
 - npm start
 
 # Packages
+### Frontend
 
 - expo-barcode-scanner
   - expo
@@ -32,14 +32,21 @@ Features include:
 - @react-navigation/native
   - react-native-screens
   - react-native-safe-area-context
-- @reduxjs/toolkit
-  - react-redux
+- react-redux
+  - @reduxjs/toolkit
   - redux-logger && @types/redux-logger
 - styled-components
   - @types/styled-components
   - babel-plugin-styled-components
 - moment
   - @types/moment
+- babel-plugin-module-resolver
+
+  ### Backend
+
+- mongoose
+- express
+- nodemon
 
   # Folder Structure
 

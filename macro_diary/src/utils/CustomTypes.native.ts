@@ -30,6 +30,7 @@ export interface RecipeIngredient {
 export interface RecipeData {
   id: number;
   title: string;
+  description?: string;
   category: RecipeCategoryEnum;
   ingredients: Product[];
   dateAdded: string;

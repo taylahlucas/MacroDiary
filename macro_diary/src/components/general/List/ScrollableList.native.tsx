@@ -1,10 +1,10 @@
-import { ScrollView } from 'react-native';
+import { ScrollView, ViewStyle } from 'react-native';
 import listStyles from './ListStyles.native';
 
 interface CustomListProps {
   children: JSX.Element | JSX.Element[];
-  style?: any;
-  contentContainerStyle?: any;
+  style?: ViewStyle;
+  contentContainerStyle?: ViewStyle;
   isHorizontal?: boolean;
 };
 
