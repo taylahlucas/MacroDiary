@@ -9,7 +9,8 @@ Features include:
   - View recently scanned items, recipes and recently added recipes.
 
   ** WORK IN PROGRESS **
-
+  
+<img width="366" alt="Screenshot 2024-01-30 at 10 47 56 am" src="https://github.com/taylahlucas/MacroDiary/assets/53559103/dbb5dc43-0828-4a2a-922e-1dd3b66ca17f">
 
 # Setup
 
